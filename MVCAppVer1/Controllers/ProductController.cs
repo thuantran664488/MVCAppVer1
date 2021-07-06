@@ -14,6 +14,6 @@ namespace MVCAppVer1.Controllers
         {
             var iPhone = new Product() { Name = "IPhone X" };
             return View(iPhone);
-        }
+        } 
     }
 }
