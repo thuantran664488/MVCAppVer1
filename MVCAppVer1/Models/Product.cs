@@ -12,7 +12,7 @@ namespace MVCAppVer1.Models
 
         public string url { get; set; }
 
-        public float price { get; set; }
+        public double price { get; set; }
 
     }
 }

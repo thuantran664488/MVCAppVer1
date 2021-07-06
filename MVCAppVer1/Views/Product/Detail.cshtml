@@ -1,10 +1,23 @@
 ﻿@model MVCAppVer1.Models.Product
 @{
     ViewBag.Title = "Detail";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    @Styles.Render("~/Content/productDetailCSS/productDetail.css")
 }
 
-<h2>@Model.Name</h2>
-<img src="@Model.url"/>
-<h2>@Model.price</h2>
 
+<div class="grid-container">
+    <div class="grid-item1">
+        <img src="@Model.url" alt="@Model.Name" />
+    </div>
+    <div class="grid-item2">
+        <div>
+            <div class="product-name">
+                <span >@Model.Name</span>
+            </div>
+            <div class="product-price">
+                <span>@string.Format("{0:0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
+            </div>
+            
+        </div>
+    </div>
+</div>

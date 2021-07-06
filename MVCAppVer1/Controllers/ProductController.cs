@@ -23,7 +23,7 @@ namespace MVCAppVer1.Controllers
             {
                 Id = id,
                 Name = "Bàn Làm Việc Kết Hợp Kệ Sách Thông Minh",
-                price = 48,
+                price = 48.100,
                 url = "/Content/src/Image/ban_lam_viec.jpg"
             };
             return View(product);
