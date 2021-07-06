@@ -15,12 +15,13 @@
     align-content: stretch;
 }
 .grid-item1 {
+    padding: 8px;
     grid-column: 1 / 2;
     justify-self: stretch;
 }
 
 .grid-item2 {
-    padding-top: 16px;
+    padding: 8px;
     grid-column: 2 / 4;
 }
 
@@ -31,7 +32,6 @@ img {
 }
 
 .product-name {
-    margin-top: 16px;
     margin-left: 32px;
     color: rgb(36, 36, 36);
     font-size: 24px;
