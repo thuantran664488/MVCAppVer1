@@ -1,4 +1,6 @@
 ﻿body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
 }
 
 
@@ -13,7 +15,13 @@
 }
 
 a {
+    width: 100%;
+    height: 100%;
 }
+
+    a:link {
+        text-decoration: none;
+    }
 
 .grid-item {
     display: block;
@@ -21,6 +29,7 @@ a {
     padding: 2px;
     justify-self: stretch;
     font-size: 0.6rem;
+
 }
 
     .grid-item:hover {
@@ -28,7 +37,32 @@ a {
     }
 
 img {
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info {
+    margin-left: 4px;
+    margin-top: 8px;
+}
+
+
+.product-name {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0px 0px 4px;
+    line-height: 20px;
+    word-break: break-word;
+    color: rgb(36, 36, 36);
+}
+
+.product-price {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 500;
+    margin: 0px 8px 0px 0px;
+    color: rgb(36, 36, 36);
+    font-weight: bold;
 }
