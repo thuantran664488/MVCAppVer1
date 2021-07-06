@@ -48,7 +48,7 @@ img {
     margin-left: 32px;
     padding: 12px;
     padding-left: 24px;
-    background-color: rgb(250, 250, 250);
+    background-color: black;
     font-size: 32px;
     line-height: 40px;
     margin-right: 8px;
@@ -56,7 +56,6 @@ img {
 }
 
 #price {
-    width: 100%;
 }
 
 button {
