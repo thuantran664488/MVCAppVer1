@@ -1,0 +1,18 @@
+﻿body {
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+    font-size: 0.6rem;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
