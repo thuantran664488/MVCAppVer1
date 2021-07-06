@@ -11,12 +11,15 @@
     <div class="grid-item2">
         <div>
             <div class="product-name">
-                <span >@Model.Name</span>
+                <span id="name">@Model.Name</span>
             </div>
             <div class="product-price">
-                <span>@string.Format("{0:0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
+                <span id="price">@string.Format("{0:0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
             </div>
             
+            <div>
+                <button>Chọn mua</button>
+            </div>
         </div>
     </div>
 </div>

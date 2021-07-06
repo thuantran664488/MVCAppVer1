@@ -33,11 +33,16 @@ img {
 
 .product-name {
     margin-left: 32px;
+    margin-right: 32px;
     color: rgb(36, 36, 36);
     font-size: 24px;
     font-weight: 300;
     line-height: 32px;
     max-width: 615px;
+}
+
+#name {
+    width: 100%
 }
 
 .product-price {
@@ -50,4 +55,19 @@ img {
     line-height: 40px;
     margin-right: 8px;
     font-weight: bold;
+}
+
+#price {
+    width: 100%;
+}
+
+button {
+    margin-top: 32px;
+    border: none;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    width: 300px;
+    background-color: rgb(255, 57, 69);
+    border-radius: 12px;
+    font-size: 16px;
 }
