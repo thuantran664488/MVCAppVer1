@@ -1,0 +1,34 @@
+﻿body {
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+a {
+}
+
+.grid-item {
+    display: block;
+    cursor: pointer;
+    padding: 2px;
+    justify-self: stretch;
+    font-size: 0.6rem;
+}
+
+    .grid-item:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+img {
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+}
