@@ -1,147 +1,28 @@
-﻿@{
+﻿@model IEnumerable<MVCAppVer1.Models.Product>
+
+@{
     ViewBag.Title = "Home Page";
     @Styles.Render("~/Content/indexCSS/index.css")
 }
 
 <div class="grid-container">
-    <div class="grid-item">
-        <a class="product-item" 
-           href="/product/detail/1">
-           <img src="~/Content/src/Image/ban_lam_viec.jpg" alt="Bàn Làm Việc Kết Hợp Kệ Sách Thông Minh" />
-            <div class="info">
-                <div class="product-name">
-                    Bàn Làm Việc Kết Hợp Kệ Sách Thông Minh
+    @foreach (var product in Model)
+    {
+        <div class="grid-item">
+            <a class="product-item"
+               @{ var route = "/product/detail/" + product.Id;} 
+               href="@route">
+                @{var img_url = product.url;}
+                <img src="@img_url " alt=" " />
+                <div class="info">
+                    <div class="product-name">
+                        @product.Name
+                    </div>
+                    <div class="product-price">
+                        @product.price <span style="text-decoration: underline">đ</span>
+                    </div>
                 </div>
-                <div class="product-price">
-                    48.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item" 
-           href="/product/detail/2">
-            <img src="~/Content/src/Image/hop_dung_linh_lien_macbook.png" alt="Hộp/ Túi đựng sạc và phụ kiện Macbook Lucas - Hàng chính hãng" />
-            <div class="info">
-                <div class="product-name">
-                    Hộp/ Túi đựng sạc và phụ kiện Macbook Lucas - Hàng chính hãng
-                </div>
-                <div class="product-price">
-                    98.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item"
-           href="/product/detail/3">
-            <img src="~/Content/src/Image/case_airpod.jpg" alt="Bao Case Cho Airpods 1/ Airpods 2 Dạ Quang Phát Sáng - Xanh Dương" />
-            <div class="info">
-                <div class="product-name">
-                    Bao Case Cho Airpods 1/ Airpods 2 Dạ Quang Phát Sáng - Xanh Dương
-                </div>
-                <div class="product-price">
-                    140.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item" 
-           href="/product/detail/4">
-            <img src="~/Content/src/Image/smart_tv.jpg" alt="" />
-            <div class="info">
-                <div class="product-name">
-                    Smart Tivi LG 4K 55 inch 55UM7600PTA
-                </div>
-                <div class="product-price">
-                    978.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item" 
-           href="/product/detail/5">
-            <img src="~/Content/src/Image/dau_thu.jpg" alt="" />
-            <div class="info">
-                <div class="product-name">
-                    BỘ ĐẦU THU TRUYỀN HÌNH KỸ THUẬT SỐ K+ 7 MÓN HÀNG CHÍNH HÃNG"
-                </div>
-                <div class="product-price">
-                    450.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item"
-           href="/product/detail/6">
-            <img src="~/Content/src/Image/ghe_giam_doc.jpg" alt="" />
-            <div class="info">
-                <div class="product-name">
-                    Ghế Giám đốc IHC10113
-                </div>
-                <div class="product-price">
-                    790.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item"
-           href="/product/detail/7">
-            <img src="~/Content/src/Image/case__kaws_aripod.jpg" alt="" />
-            <div class="info">
-                <div class="product-name">
-                    Vỏ bảo vệ bao đựng tai nghe Kaws airpod 1/2
-                </div>
-                <div class="product-price">
-                    39.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item"
-           href="/product/detail/8">
-            <img src="~/Content/src/Image/top_t_shirt.jpg" alt="" />
-            <div class="info">
-                <div class="product-name">
-                    Summer Korean Style Simple Striped Loose Sleeveless Vest Top T-Shirt
-                </div>
-                <div class="product-price">
-                    980.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item" 
-           href="/product/detail/9">
-            <img src="~/Content/src/Image/dan_cuong_luc.jpg" alt="" />
-            <div class="info">
-                <div class="product-name">
-                    Miếng dán Kính Cường Lực full 3D cho iPhone XR / iPhone 11 6.1 inch hiệu Nillkin XD CP+Max - Hàng Chính Hãng
-                </div>
-                <div class="product-price">
-                    90.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="grid-item">
-        <a class="product-item" 
-           href="/product/detail/10">
-            <img src="~/Content/src/Image/bao_da_airpod.jpg" alt="" />
-            <div class="info">
-                <div class="product-name">
-                    Bao da bê Epsom Xanh chính hãng HANHSON cho Apple AirPods Pro
-                </div>
-                <div class="product-price">
-                    90.000 <span style="text-decoration: underline">đ</span>
-                </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
+     }
 </div>

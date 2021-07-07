@@ -16,7 +16,9 @@ namespace MVCAppVer1.Controllers
             return View(iPhone);
         }
 
-        // GET: Product/Detail
+        
+
+        // GET: Product/detail/id
         public ActionResult detail(string id)
         {
             var product = new Product()
@@ -45,7 +47,7 @@ namespace MVCAppVer1.Controllers
             if (id == "4")
             {
                 product.Name = "Smart Tivi LG 4K 55 inch 55UM7600PTA";
-                product.price = 978.000;
+                product.price = 978.0000;
                 product.url = "/Content/src/Image/smart_tv.jpg";
             }
             if (id == "5")
@@ -86,6 +88,12 @@ namespace MVCAppVer1.Controllers
             }
 
             return View(product);
+        }
+
+        // GET: Product/detail ->  Redirecto to Home page
+        public ActionResult Index()
+        {
+            return RedirectToAction("Index", "Home");
         }
     }
 }
