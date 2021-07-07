@@ -31,7 +31,7 @@ namespace MVCAppVer1.Controllers
                 {
                     Id = "3",
                     Name = "Bao Case Cho Airpods 1/ Airpods 2 Dạ Quang Phát Sáng - Xanh Dương",
-                    price = 98.000,
+                    price = 140.000,
                     url = "/Content/src/Image/case_airpod.jpg",
                 },
                 new Product

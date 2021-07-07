@@ -13,12 +13,42 @@
             <div class="product-name">
                 <span id="name">@Model.Name</span>
             </div>
-            <div class="product-price">
-                <span id="price">@string.Format("{0:0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
+            <div class="price-and-icon">
+                <div class="product-price">
+                    <span id="price">@string.Format("{0:0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
+                </div>
+                <div class="product-icon">
+                    <div class="icon-content">
+                        Tiki card: Hoàn tiền 15% tối đa 600k/tháng
+                    </div>
+                    <div class="icon-content">
+                        FREESHIP: Không giới hạn, tự động áp dụng
+                    </div>
+                </div>
             </div>
-            
+            <div class="product-option">
+            </div>
+            <hr />
+            <div class="note-for-customer">
+                Ban hãy <span style="font-weight: bold; color:blue">NHẬP ĐỊA CHỈ</span> nhận hàng để được báo thời gian và chi phí giao hàng một cách chính xác nhất
+            </div>
+            <hr />
+            <div class="quantily-input">
+                <p class="quantity-label">Số lượng</p>
+                <div class="group-input">
+                    <button id="btn-decrease">
+                        <img class="btn-change-value"  src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg" alt="Alternate Text" />
+                    </button>
+                    <input type="text" value="1" />
+                    <button id="btn-increase">
+                        <img class="btn-change-value"  src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="Alternate Text" />
+                    </button>
+                </div>
+
+                
+            </div>
             <div>
-                <button>Chọn mua</button>
+                <button class="buy-btn">Chọn mua</button>
             </div>
         </div>
     </div>
