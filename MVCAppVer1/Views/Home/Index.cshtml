@@ -2,7 +2,10 @@
 
 @{
     ViewBag.Title = "Home Page";
-    @Styles.Render("~/Content/indexCSS/index.css")
+}
+
+@section css{
+    <link href="~/Content/_bundle/index.min.css" rel="stylesheet" />
 }
 
 <div class="grid-container">
@@ -10,7 +13,7 @@
     {
         <div class="grid-item">
             <a class="product-item"
-               @{ var route = "/product/detail/" + product.Id;} 
+               @{ var route = "/product/detail/" + product.Id;}
                href="@route">
                 @{var img_url = product.url;}
                 <img src="@img_url " alt=" " />
@@ -24,5 +27,5 @@
                 </div>
             </a>
         </div>
-     }
+    }
 </div>

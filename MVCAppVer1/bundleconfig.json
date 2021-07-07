@@ -1,0 +1,10 @@
+[
+  {
+    "outputFileName": "Content/_bundle/index.min.css",
+    "inputFiles": [
+      "Content/bootstrap.css",
+      "Content/Site.css",
+      "Content/indexCSS/index.css"
+    ]
+  }
+]
