@@ -3,52 +3,160 @@
     ViewBag.Title = "Detail";
     @Styles.Render("~/Content/productDetailCSS/productDetail.css")
 }
- 
+
 <div class="grid-container">
     <div class="grid-item1">
         <img src="@Model.url" alt="@Model.Name" />
     </div>
     <div class="grid-item2">
-        <div>
-            <div class="product-name">
-                <span id="name">@Model.Name</span>
-            </div>
-            <div class="price-and-icon">
-                <div class="product-price">
-                    <span id="price">@string.Format("{0:0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
+        <div class="header-info">
+            <div class="header-info-item" id="header-info-item1">
+                <div>
+                    <span>Thương hiệu: ....</span>
                 </div>
-                <div class="product-icon">
-                    <div class="icon-content">
-                        Tiki card: Hoàn tiền 15% tối đa 600k/tháng
+                <div class="product-name">
+                    <span id="name">@Model.Name</span>
+                </div>
+                <div>
+                    <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</span>
+                </div>
+            </div>
+            <div class="header-info-item" id="header-info-item2">
+                <div class="product-action">
+                    <div class="icon-wrap" id="product-like">
+                        <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-like.svg" alt="Alternate Text" />
                     </div>
-                    <div class="icon-content">
-                        FREESHIP: Không giới hạn, tự động áp dụng
+                    <div class="icon-wrap" id="product-share">
+                        <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-account-social.svg" alt="Alternate Text" />
                     </div>
                 </div>
             </div>
-            <div class="product-option">
-            </div>
-            <hr />
-            <div class="note-for-customer">
-                Ban hãy <span style="font-weight: bold; color:blue">NHẬP ĐỊA CHỈ</span> nhận hàng để được báo thời gian và chi phí giao hàng một cách chính xác nhất
-            </div>
-            <hr />
-            <div class="quantily-input">
-                <p class="quantity-label">Số lượng</p>
-                <div class="group-input">
-                    <button id="btn-decrease">
-                        <img class="btn-change-value"  src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg" alt="Alternate Text" />
-                    </button>
-                    <input type="text" value="1" />
-                    <button id="btn-increase">
-                        <img class="btn-change-value"  src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="Alternate Text" />
-                    </button>
+        </div>
+        <div class="body-info">
+            <div class="body-info-item" id="body-info-item1">
+                <div class="price-and-icon">
+                    <div class="product-price">
+                        <span id="price">@string.Format("{0:0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
+                    </div>
+                    <div class="product-icon">
+                        <div class="icon-content">
+                            Tiki card: Hoàn tiền 15% tối đa 600k/tháng
+                        </div>
+                        <div class="icon-content">
+                            FREESHIP: Không giới hạn, tự động áp dụng
+                        </div>
+                    </div>
                 </div>
-
+                <div class="product-option">
+                </div>
+                <hr />
+                <div class="note-for-customer">
+                    Ban hãy <span style="font-weight: bold; color:blue">NHẬP ĐỊA CHỈ</span> nhận hàng để được báo thời gian và chi phí giao hàng một cách chính xác nhất
+                </div>
+                <hr />
+                <div class="quantily-input">
+                    <p class="quantity-label">Số lượng</p>
+                    <div class="group-input">
+                        <button id="btn-decrease">
+                            <img class="btn-change-value" src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg" alt="Alternate Text" />
+                        </button>
+                        <input type="text" value="1" />
+                        <button id="btn-increase">
+                            <img class="btn-change-value" src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="Alternate Text" />
+                        </button>
+                    </div>
+                    <div>
+                        <button class="buy-btn">Chọn mua</button>
+                    </div>
+                </div>
+            </div>
+            <div class="body-info-item" id="body-info-item2">
+                <div class="seller-widget">
+                    <a href="#" style="text-decoration:none">
+                        <div class="seller-info">
+                            <div class="seller-logo">
+                                <img src="https://vcdn.tikicdn.com/cache/w88/ts/seller/72/01/1c/3621c65b2302121aa5caa2118cdb117d.jpg" alt="Alternate Text" />
+                            </div>
+                            <div class="seller-name">
+                                <span style="color: black; font-weight:bold">Độc Chất Store</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="seller-detail">
+                        <div class="seller-detail-item" id="seller-detail-review">
+                            <div class="seller-detail-title">4.6 / 5</div>
+                            <div class="seller-detail-subtitle">57</div>
+                        </div>
+                        <div class="seller-detail-item" id="seller-detail-follower">
+                            <div class="seller-detail-title">5</div>
+                            <div class="seller-detail-subtitle">Theo dõi</div>
+                        </div>
+                    </div>
+                    <div class="seller-action">
+                        <a href="#" class="seller-action-item" id="seller-action-gotoShop">
+                            <div class="action-icon">
+                                <img src="https://salt.tikicdn.com/ts/upload/49/27/ff/d735c33edfdc6cf6aeb6e183bec28869.png" alt="Alternate Text" />
+                            </div>
+                            <div class="action-name">
+                                Xem Shop
+                            </div>
+                        </a>
+                        <a href="#" class="seller-action-item" id="seller-action-followShop">
+                            <div class="action-icon">
+                                <img src="https://salt.tikicdn.com/ts/upload/5b/bf/3c/eeda00767e26b5873030e44f951441c4.png" alt="Alternate Text" />
+                            </div>
+                            <div class="action-name">
+                                Theo dõi
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 
-            </div>
-            <div>
-                <button class="buy-btn">Chọn mua</button>
+                <div class="customer-benifits">
+                    <div class="benifits-item">
+                        <div>
+                            <img class="benifit-icon" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/compensation.svg" alt="Alternate Text" />
+
+                        </div>
+                        <div style="text-align:center">
+                            <span style="text-align:center">
+                                Hoàn tiền
+                                <br />
+                                <b>111%</b>
+                                <br />
+                                nếu giá
+                            </span>
+                        </div>
+                    </div>
+                    <div class="benifits-item">
+                        <div>
+                            <img class="benifit-icon" src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/guarantee.svg" alt="Alternate Text" />
+                        </div>
+                        <div style="text-align:center">
+                            <span>
+                                Mở hộp
+                                <br />
+                                kiểm tra
+                                <br />
+                                nhận hàng
+                            </span>
+                        </div>
+                    </div>
+                    <div class="benifits-item">
+                        <div>
+                            <img class="benifit-icon" src="https://frontend.tikicdn.com/_desktop-next/static/img/icons/refund.svg" alt="Alternate Text" />
+                        </div>
+                        <div style="text-align:center">
+                            <span>
+                                Đổi trả
+                                <br />
+                                <b>7 ngày</b>
+                                <br />
+                                nếu sp lỗi
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
