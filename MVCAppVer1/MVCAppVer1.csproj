@@ -134,6 +134,17 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\indexCSS\index.css" />
+    <Content Include="Content\productDetailCSS\productDetail.css" />
+    <Content Include="Content\src\Image\ban_lam_viec.jpg" />
+    <Content Include="Content\src\Image\bao_da_airpod.jpg" />
+    <Content Include="Content\src\Image\case_airpod.jpg" />
+    <Content Include="Content\src\Image\case__kaws_aripod.jpg" />
+    <Content Include="Content\src\Image\dan_cuong_luc.jpg" />
+    <Content Include="Content\src\Image\dau_thu.jpg" />
+    <Content Include="Content\src\Image\ghe_giam_doc.jpg" />
+    <Content Include="Content\src\Image\hop_dung_linh_lien_macbook.png" />
+    <Content Include="Content\src\Image\smart_tv.jpg" />
+    <Content Include="Content\src\Image\top_t_shirt.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -166,6 +177,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\Phone.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
