@@ -1,40 +1,14 @@
 [
   {
-    "outputFileName": "Content/_bundle/bundle.css",
-    "inputFiles": [
-      "Content/Site.css",
-      "Content/bootstrap.css",
-      "Content/productDetailCSS/productDetail.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/productDetailCSS/bundle.css",
-    "inputFiles": [
-      "Content/productDetailCSS/productDetail.css",
-      "Content/bootstrap.css",
-      "Content/Site.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/_bundle/productDetail.css",
-    "inputFiles": [
-      "Content/productDetailCSS/productDetail.css",
-      "Content/Site.css",
-      "Content/bootstrap.css"
-    ]
-  },
-  {
-    "outputFileName": "Content/thuan.css",
-    "inputFiles": [
-      "Content/Site.css",
-      "Content/bootstrap.css",
-      "Content/productDetailCSS/productDetail.css"
-    ]
-  },
-  {
     "outputFileName": "Content/_bundle/index.min.css",
     "inputFiles": [
       "Content/indexCSS/index.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/productDetailCSS/productDetail.min.css",
+    "inputFiles": [
+      "Content/productDetailCSS/productDetail.css"
     ]
   }
 ]

@@ -131,6 +131,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\indexCSS\index.css" />
+    <Content Include="Content\_bundle\productDetail.min.css" />
     <Content Include="Content\_bundle\index.min.css" />
     <Content Include="Content\productDetailCSS\productDetail.css" />
     <Content Include="Content\src\Image\ban_lam_viec.jpg" />
@@ -143,7 +144,6 @@
     <Content Include="Content\src\Image\hop_dung_linh_lien_macbook.png" />
     <Content Include="Content\src\Image\smart_tv.jpg" />
     <Content Include="Content\src\Image\top_t_shirt.jpg" />
-    <Content Include="Content\_bundle\productDetail.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
