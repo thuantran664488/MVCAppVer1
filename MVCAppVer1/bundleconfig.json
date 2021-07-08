@@ -1,10 +1,8 @@
 [
   {
-    "outputFileName": "Content/_bundle/index.min.css",
+    "outputFileName": "Content/productDetailCSS/productDetail.min.css",
     "inputFiles": [
-      "Content/bootstrap.css",
-      "Content/Site.css",
-      "Content/indexCSS/index.css"
+      "Content/productDetailCSS/productDetail.css"
     ]
   }
 ]
