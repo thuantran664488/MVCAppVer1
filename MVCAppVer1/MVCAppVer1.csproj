@@ -131,8 +131,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\css\index.css" />
-    <Content Include="Content\_bundle\productDetail.min.css" />
-    <Content Include="Content\_bundle\index.min.css" />
+    <Content Include="Content\js\IndexJS.js" />
     <Content Include="Content\css\productDetail.css" />
     <Content Include="Content\src\Image\ban_lam_viec.jpg" />
     <Content Include="Content\src\Image\bao_da_airpod.jpg" />
@@ -144,6 +143,14 @@
     <Content Include="Content\src\Image\hop_dung_linh_lien_macbook.png" />
     <Content Include="Content\src\Image\smart_tv.jpg" />
     <Content Include="Content\src\Image\top_t_shirt.jpg" />
+    <Content Include="Content\_bundle\indexBundle.css" />
+    <Content Include="Content\_bundle\indexBundle.min.css">
+      <DependentUpon>indexBundle.css</DependentUpon>
+    </Content>
+    <Content Include="Content\_bundle\productDetaiBundle.css" />
+    <Content Include="Content\_bundle\productDetaiBundle.min.css">
+      <DependentUpon>productDetaiBundle.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -151,9 +158,6 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="bundleconfig.json" />
-    <Content Include="bundleconfig.json.bindings">
-      <DependentUpon>bundleconfig.json</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

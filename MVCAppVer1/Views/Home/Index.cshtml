@@ -2,13 +2,11 @@
 
 @{
     ViewBag.Title = "Home Page";
-    @Styles.Render("~/Content/css/index.css");
-    @Styles.Render("~/Content/css");
 }
 
-@*@section css{
-        <link href="~/Content/_bundle/index.min.css" rel="stylesheet" />
-    }*@
+@section css{
+        <link href="~/Content/_bundle/indexBundle.min.css" rel="stylesheet" />
+}
 
 <div class="grid-container">
     @foreach (var product in Model)
@@ -20,9 +18,7 @@
                 @{var img_url = product.url;}
                 <img src="@img_url " alt=" " />
                 <div class="info">
-                    <div class="product-name">
-                        @product.Name
-                    </div>
+                    <div class="product-name" id="name">@product.Name</div>
                     <div class="product-price">
                         @string.Format("{0:0.000}", product.price) <span style="text-decoration: underline">đ</span>
                     </div>
@@ -32,5 +28,13 @@
     }
 </div>
 @section scripts{
-
+    <script>
+        let productName = document.getElementsByClassName("product-name");
+        for (let i = 0; i < productName.length; i++) {
+            proElem = productName[i].innerHTML;
+            if (proElem.length >= 55 ){
+                productName[i].innerHTML = proElem.slice(0, 55) + " ...";
+            }
+        }
+    </script>
 }

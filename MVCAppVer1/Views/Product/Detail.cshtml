@@ -1,13 +1,11 @@
 ﻿@model MVCAppVer1.Models.Product
 @{
     ViewBag.Title = "Detail";
-    @Styles.Render("~/Content/css/productDetail.css");
-    @Styles.Render("~/Content/css");
 }
 
-@*@section css{
-        <link href="~/Content/_bundle/productDetail.min.css" rel="stylesheet" />
-    }*@
+@section css{
+        <link href="~/Content/_bundle/productDetaiBundle.min.css" rel="stylesheet" />
+}
 
 <div class="grid-container">
     <div class="grid-item1">
@@ -15,17 +13,16 @@
     </div>
     <div class="grid-item2">
         <div class="header-info">
-            <div class="header-info-item" id="header-info-item1">
-                <div>
-                    <span>Thương hiệu: ....</span>
-                </div>
-                <div class="product-name">
-                    <span id="name">@Model.Name</span>
-                </div>
-                <div>
-                    <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</span>
-                </div>
+            <div>
+                <div>Thương hiệu: ....</div>
             </div>
+            <div class="product-name">
+                <div id="name">@Model.Name</div>
+            </div>
+            <div>
+                <div style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</div>
+            </div>
+
         </div>
         <div class="body-info">
             <div class="body-info-item" id="body-info-item1">
