@@ -15,7 +15,7 @@ namespace MVCAppVer1
 
             routes.MapRoute(
                 name: "BookDetail",
-                url: "product/detail/id",
+                url: "product/detail/id", //{url}-{id}
                 defaults: new { controller = "Product", action = "Product" }
                 );
 
