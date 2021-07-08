@@ -1,7 +1,8 @@
 ﻿body {
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
-    background-color: rgb(250, 250, 250);
+    background-color: black;
+
 }
 
 .grid-container {
@@ -27,11 +28,6 @@
     padding-left: 12px;
     padding-right: 12px;
     grid-column: 2 / 4;
-}
-
-.header-info {
-    display: grid;
-    grid-template-columns: auto auto;
 }
 
 .header-info-item {

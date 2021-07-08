@@ -2,12 +2,13 @@
 
 @{
     ViewBag.Title = "Home Page";
+    @Styles.Render("~/Content/css/index.css");
+    @Styles.Render("~/Content/css");
 }
 
-@section css{
-    <link href="~/Content/_bundle/index.min.css" rel="stylesheet" />
-}
-
+@*@section css{
+        <link href="~/Content/_bundle/index.min.css" rel="stylesheet" />
+    }*@
 
 <div class="grid-container">
     @foreach (var product in Model)

@@ -6,7 +6,7 @@
     ]
   },
   {
-    "outputFileName": "Content/productDetailCSS/productDetail.min.css",
+    "outputFileName": "Content/_bundle/productDetail.min.css",
     "inputFiles": [
       "Content/productDetailCSS/productDetail.css"
     ]

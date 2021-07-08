@@ -130,10 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\indexCSS\index.css" />
+    <Content Include="Content\css\index.css" />
     <Content Include="Content\_bundle\productDetail.min.css" />
     <Content Include="Content\_bundle\index.min.css" />
-    <Content Include="Content\productDetailCSS\productDetail.css" />
+    <Content Include="Content\css\productDetail.css" />
     <Content Include="Content\src\Image\ban_lam_viec.jpg" />
     <Content Include="Content\src\Image\bao_da_airpod.jpg" />
     <Content Include="Content\src\Image\case_airpod.jpg" />
@@ -184,8 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\" />
-    <Folder Include="Content\icon\" />
+    <Folder Include="Content\src\icon\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,11 +1,13 @@
 ﻿@model MVCAppVer1.Models.Product
 @{
     ViewBag.Title = "Detail";
+    @Styles.Render("~/Content/css/productDetail.css");
+    @Styles.Render("~/Content/css");
 }
 
-@section css{   
-    <link href="~/Content/_bundle/productDetail.min.css" rel="stylesheet" />
-}
+@*@section css{
+        <link href="~/Content/_bundle/productDetail.min.css" rel="stylesheet" />
+    }*@
 
 <div class="grid-container">
     <div class="grid-item1">
@@ -22,16 +24,6 @@
                 </div>
                 <div>
                     <span style="line-height: 24px; color: rgb(120, 120, 120)">|| Đã bán 1000+</span>
-                </div>
-            </div>
-            <div class="header-info-item" id="header-info-item2">
-                <div class="product-action">
-                    <div class="icon-wrap" id="product-like">
-                        <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-like.svg" alt="Alternate Text" />
-                    </div>
-                    <div class="icon-wrap" id="product-share">
-                        <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-account-social.svg" alt="Alternate Text" />
-                    </div>
                 </div>
             </div>
         </div>
