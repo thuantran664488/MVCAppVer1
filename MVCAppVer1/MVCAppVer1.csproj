@@ -129,12 +129,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\indexCSS\index.css" />
-    <Content Include="Content\productDetailCSS\productDetail.css" />
+    <Content Include="Content\css\index.css" />
+    <Content Include="Content\js\IndexJS.js" />
+    <Content Include="Content\css\productDetail.css" />
     <Content Include="Content\src\Image\ban_lam_viec.jpg" />
     <Content Include="Content\src\Image\bao_da_airpod.jpg" />
     <Content Include="Content\src\Image\case_airpod.jpg" />
@@ -145,12 +143,21 @@
     <Content Include="Content\src\Image\hop_dung_linh_lien_macbook.png" />
     <Content Include="Content\src\Image\smart_tv.jpg" />
     <Content Include="Content\src\Image\top_t_shirt.jpg" />
+    <Content Include="Content\_bundle\indexBundle.css" />
+    <Content Include="Content\_bundle\indexBundle.min.css">
+      <DependentUpon>indexBundle.css</DependentUpon>
+    </Content>
+    <Content Include="Content\_bundle\productDetaiBundle.css" />
+    <Content Include="Content\_bundle\productDetaiBundle.min.css">
+      <DependentUpon>productDetaiBundle.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="bundleconfig.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -181,16 +188,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\src\icon\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />

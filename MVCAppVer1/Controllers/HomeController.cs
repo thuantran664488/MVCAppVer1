@@ -11,6 +11,26 @@ namespace MVCAppVer1.Controllers
     {
         public ActionResult Index()
         {
+            var products = GetListProducts();
+            return View(products);
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public List<Product> GetListProducts()
+        {
             var products = new List<Product>
             {
                 new Product
@@ -31,7 +51,7 @@ namespace MVCAppVer1.Controllers
                 {
                     Id = "3",
                     Name = "Bao Case Cho Airpods 1/ Airpods 2 Dạ Quang Phát Sáng - Xanh Dương",
-                    price = 98.000,
+                    price = 140.000,
                     url = "/Content/src/Image/case_airpod.jpg",
                 },
                 new Product
@@ -85,21 +105,7 @@ namespace MVCAppVer1.Controllers
                 }
 
             };
-            return View(products);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return products;
         }
     }
 }
