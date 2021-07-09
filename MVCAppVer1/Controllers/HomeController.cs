@@ -58,7 +58,7 @@ namespace MVCAppVer1.Controllers
                 {
                     Id = "4",
                     Name = "Smart Tivi LG 4K 55 inch 55UM7600PTA",
-                    price = 978.0000,
+                    price = 3978.0000,
                     url = "/Content/src/Image/smart_tv.jpg",
                 },
                 new Product
