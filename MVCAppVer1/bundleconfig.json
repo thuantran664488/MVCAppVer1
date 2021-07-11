@@ -2,17 +2,31 @@
   {
     "outputFileName": "Content/_bundle/indexBundle.css",
     "inputFiles": [
-      "Content/css/index.css",
+      "Content/font.css",
+      "Content/bootstrap.css",
       "Content/Site.css",
-      "Content/bootstrap.css"
+      "Content/css/index.css"
     ]
   },
   {
     "outputFileName": "Content/_bundle/productDetaiBundle.css",
     "inputFiles": [
+      "Content/font.css",
+      "Content/bootstrap.css",
       "Content/Site.css",
-      "Content/css/productDetail.css",
-      "Content/bootstrap.css"
+      "Content/css/productDetail.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/IndexJS.min.js",
+    "inputFiles": [
+      "Content/js/IndexJS.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/js/DetailJS.min.js",
+    "inputFiles": [
+      "Content/js/DetailJS.js"
     ]
   }
 ]

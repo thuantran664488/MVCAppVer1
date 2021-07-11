@@ -4,7 +4,7 @@
 }
 
 @section css{
-        <link href="~/Content/_bundle/productDetaiBundle.min.css" rel="stylesheet" />
+    <link href="~/Content/_bundle/productDetaiBundle.min.css" rel="stylesheet" />
 }
 
 <div class="grid-container">
@@ -49,11 +49,11 @@
                 <div class="quantily-input">
                     <p class="quantity-label">Số lượng</p>
                     <div class="group-input">
-                        <button id="btn-decrease">
+                        <button onclick="decreaseValue()" id="btn-decrease">
                             <img class="btn-change-value" src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg" alt="Alternate Text" />
                         </button>
-                        <input type="text" value="1" />
-                        <button id="btn-increase">
+                        <input id="inputValue" type="text" value="1" />
+                        <button onclick="increaseValue()" id="btn-increase">
                             <img class="btn-change-value" src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="Alternate Text" />
                         </button>
                     </div>
@@ -65,3 +65,6 @@
         </div>
     </div>
 </div>
+@section scripts{
+    <script src="~/Content/js/DetailJS.min.js"></script>
+}

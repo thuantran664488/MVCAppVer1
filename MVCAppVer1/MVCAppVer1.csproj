@@ -131,8 +131,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\css\index.css" />
+    <Content Include="Content\font.css" />
+    <Content Include="Content\js\DetailJS.js" />
+    <Content Include="Content\js\DetailJS.min.js">
+      <DependentUpon>DetailJS.js</DependentUpon>
+    </Content>
     <Content Include="Content\js\IndexJS.js" />
     <Content Include="Content\css\productDetail.css" />
+    <Content Include="Content\js\IndexJS.min.js">
+      <DependentUpon>IndexJS.js</DependentUpon>
+    </Content>
     <Content Include="Content\src\Image\ban_lam_viec.jpg" />
     <Content Include="Content\src\Image\bao_da_airpod.jpg" />
     <Content Include="Content\src\Image\case_airpod.jpg" />
@@ -180,10 +188,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Product\Phone.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>

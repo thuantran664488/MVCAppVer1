@@ -2,10 +2,12 @@
 
 @{
     ViewBag.Title = "Home Page";
+    @*@Styles.Render("~/Content/css/index.css");
+        @Styles.Render("~/Content/css")*@
 }
 
 @section css{
-        <link href="~/Content/_bundle/indexBundle.min.css" rel="stylesheet" />
+    <link href="~/Content/_bundle/indexBundle.min.css" rel="stylesheet" />
 }
 
 <div class="grid-container">
@@ -13,7 +15,7 @@
     {
         <div class="grid-item">
             <a class="product-item"
-               @{ var route = "/product/detail/" + product.Id;}
+               @{ var route = "/product/" + product.metaTitle + "-" + product.Id;}
                href="@route">
                 @{var img_url = product.url;}
                 <img src="@img_url " alt=" " />
@@ -27,14 +29,6 @@
         </div>
     }
 </div>
-@section scripts{
-    <script>
-        let productName = document.getElementsByClassName("product-name");
-        for (let i = 0; i < productName.length; i++) {
-            proElem = productName[i].innerHTML;
-            if (proElem.length >= 55 ){
-                productName[i].innerHTML = proElem.slice(0, 55) + " ...";
-            }
-        }
-    </script>
+@section css{
+    <script src="~/Content/js/IndexJS.min.js"></script>
 }
