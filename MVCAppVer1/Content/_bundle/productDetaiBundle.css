@@ -11641,6 +11641,12 @@ textarea {
         max-width: 540px;
     }
 }
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .container {
+        max-width: 300px;
+    }
+}
 .grid-container {
     background-color: white;
     padding: 8px;
@@ -11940,7 +11946,6 @@ input {
 
 @media (min-width: 576px) and (max-width: 992px) {
     .grid-container {
-        display: grid;
         grid-template-columns: unset;
         grid-template-rows: auto auto auto;
     }
@@ -11954,5 +11959,28 @@ input {
 
     .grid-item2 {
         grid-column: unset;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .grid-container {
+        display: block;
+    }
+
+    .grid-item1 {
+        width: auto;
+        border: unset;
+    }
+
+    .grid-item2 {
+        grid-column: unset;
+    }
+
+    img {
+        height:auto;
+    }
+
+    .buy-btn {
+        width: 100%;
     }
 }
