@@ -52,7 +52,7 @@
                         <button onclick="decreaseValue()" id="btn-decrease">
                             <img class="btn-change-value" src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg" alt="Alternate Text" />
                         </button>
-                        <input id="inputValue" type="text" value="1" />
+                        <input id="inputValue" onchange="handleChange(this);" type="text" value="1" />
                         <button onclick="increaseValue()" id="btn-increase">
                             <img class="btn-change-value" src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="Alternate Text" />
                         </button>

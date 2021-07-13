@@ -11624,6 +11624,23 @@ textarea {
     max-width: 280px;
 }
 
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .container {
+        max-width: 900px;
+    }
+}
 .grid-container {
     padding: 16px 8px;
     display: grid;
@@ -11634,7 +11651,6 @@ textarea {
     justify-content: stretch;
     align-content: stretch;
     background-color: white;
-    width: 1270px;
 }
 
 a {
@@ -11667,11 +11683,12 @@ img {
 
 .info {
     margin-top: 8px;
+    font-size: 20px;
 }
 
 
 .product-name {
-    font-size: 16px;
+    
     font-weight: 300;
     margin: 0px 0px 4px;
     line-height: 20px;
@@ -11680,10 +11697,51 @@ img {
 }
 
 .product-price {
-    font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     margin: 0px 8px 0px 0px;
     color: rgb(36, 36, 36);
     font-weight: bold;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .grid-container {
+        padding: 16px 8px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        column-gap: 0;
+        row-gap: 15px;
+        justify-items: stretch;
+        justify-content: stretch;
+        align-content: stretch;
+        background-color: white;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .grid-container {
+        padding: 16px 8px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 0;
+        row-gap: 15px;
+        justify-items: stretch;
+        justify-content: stretch;
+        align-content: stretch;
+        background-color: white;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .grid-container {
+        padding: 16px 8px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 0;
+        row-gap: 15px;
+        justify-items: stretch;
+        justify-content: stretch;
+        align-content: stretch;
+        background-color: white;
+    }
 }

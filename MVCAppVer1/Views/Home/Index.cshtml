@@ -13,11 +13,12 @@
 <div class="grid-container">
     @foreach (var product in Model)
     {
+        var route = "/product/" + product.metaTitle + "-" + product.Id;
+        var img_url = product.url;
+
         <div class="grid-item">
             <a class="product-item"
-               @{ var route = "/product/" + product.metaTitle + "-" + product.Id;}
                href="@route">
-                @{var img_url = product.url;}
                 <img src="@img_url " alt=" " />
                 <div class="info">
                     <div class="product-name" id="name">@product.Name</div>
@@ -29,6 +30,6 @@
         </div>
     }
 </div>
-@section css{
+@section scripts{
     <script src="~/Content/js/IndexJS.min.js"></script>
 }
