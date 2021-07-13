@@ -13,21 +13,8 @@
 <div class="grid-container">
     @foreach (var product in Model)
     {
-        var route = "/product/" + product.metaTitle + "-" + product.Id;
-        var img_url = product.url;
+        @Html.Partial("~/Views/Home/ListProduct.cshtml", product);
 
-        <div class="grid-item">
-            <a class="product-item"
-               href="@route">
-                <img src="@img_url " alt=" " />
-                <div class="info">
-                    <div class="product-name" id="name">@product.Name</div>
-                    <div class="product-price">
-                        @string.Format("{0:0,0.000}", product.price) <span style="text-decoration: underline">đ</span>
-                    </div>
-                </div>
-            </a>
-        </div>
     }
 </div>
 @section scripts{
