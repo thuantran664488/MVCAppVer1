@@ -11638,7 +11638,7 @@ textarea {
 
 @media (min-width: 576px) and (max-width: 992px) {
     .container {
-        max-width: 900px;
+        max-width: 540px;
     }
 }
 .grid-container {
@@ -11930,3 +11930,29 @@ input {
     .buy-btn:hover {
         background-color: rgba(255, 57, 69, 0.8);
     }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: auto auto auto;
+    }
+
+    .grid-item1 {
+        grid-column: unset;
+        justify-self:center;
+        border:unset;
+        padding-right:8px;
+    }
+
+    .grid-item2 {
+        grid-column: unset;
+    }
+}
