@@ -151,6 +151,8 @@
     <Content Include="Content\src\Image\hop_dung_linh_lien_macbook.png" />
     <Content Include="Content\src\Image\smart_tv.jpg" />
     <Content Include="Content\src\Image\top_t_shirt.jpg" />
+    <Content Include="Content\txt\TextFile1.txt" />
+    <Content Include="Content\txt\XMLFile1.xml" />
     <Content Include="Content\_bundle\indexBundle.css" />
     <Content Include="Content\_bundle\indexBundle.min.css">
       <DependentUpon>indexBundle.css</DependentUpon>
