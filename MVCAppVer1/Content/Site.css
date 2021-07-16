@@ -1,12 +1,19 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(36, 36, 36)
+
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    width: 1270px;
+    margin: 0 auto;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +28,28 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .container {
+        max-width: 300px;
+    }
 }

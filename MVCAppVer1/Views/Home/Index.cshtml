@@ -2,39 +2,27 @@
 
 @{
     ViewBag.Title = "Home Page";
+    @*@Styles.Render("~/Content/css/index.css");
+        @Styles.Render("~/Content/css")*@
 }
 
 @section css{
-        <link href="~/Content/_bundle/indexBundle.min.css" rel="stylesheet" />
+    <link href="~/Content/_bundle/indexBundle.min.css" rel="stylesheet" />
 }
 
+<p id="demo">
+    Let Ajax change this text
+</p>
+<button id="btn-ajax" onclick="loadDoc()">Click to load Txt</button>
+<button onclick="loadXML()">Click to load XML</button>
 <div class="grid-container">
     @foreach (var product in Model)
     {
-        <div class="grid-item">
-            <a class="product-item"
-               @{ var route = "/product/detail/" + product.Id;}
-               href="@route">
-                @{var img_url = product.url;}
-                <img src="@img_url " alt=" " />
-                <div class="info">
-                    <div class="product-name" id="name">@product.Name</div>
-                    <div class="product-price">
-                        @string.Format("{0:0.000}", product.price) <span style="text-decoration: underline">đ</span>
-                    </div>
-                </div>
-            </a>
-        </div>
+        @Html.Partial("~/Views/Home/ListProduct.cshtml", product);
+
     }
+
 </div>
 @section scripts{
-    <script>
-        let productName = document.getElementsByClassName("product-name");
-        for (let i = 0; i < productName.length; i++) {
-            proElem = productName[i].innerHTML;
-            if (proElem.length >= 55 ){
-                productName[i].innerHTML = proElem.slice(0, 55) + " ...";
-            }
-        }
-    </script>
+    <script src="~/Content/js/IndexJS.min.js"></script>
 }

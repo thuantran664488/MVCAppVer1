@@ -1,0 +1,15 @@
+﻿@model MVCAppVer1.Models.Product
+<div class="grid-item">
+    @{var route = "/product/" + Model.metaTitle + "-" + Model.Id;
+        var img_url = Model.url; }
+    <a class="product-item"
+       href="@route">
+        <img src="@img_url " alt=" " />
+        <div class="info">
+            <div class="product-name" id="name">@Model.Name</div>
+            <div class="product-price">
+                @string.Format("{0:0,0.000}", @Model.price) <span style="text-decoration: underline">đ</span>
+            </div>
+        </div>
+    </a>
+</div>

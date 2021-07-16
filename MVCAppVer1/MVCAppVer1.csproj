@@ -131,8 +131,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\css\index.css" />
+    <Content Include="Content\font.css" />
+    <Content Include="Content\js\DetailJS.js" />
+    <Content Include="Content\js\DetailJS.min.js">
+      <DependentUpon>DetailJS.js</DependentUpon>
+    </Content>
     <Content Include="Content\js\IndexJS.js" />
     <Content Include="Content\css\productDetail.css" />
+    <Content Include="Content\js\IndexJS.min.js">
+      <DependentUpon>IndexJS.js</DependentUpon>
+    </Content>
     <Content Include="Content\src\Image\ban_lam_viec.jpg" />
     <Content Include="Content\src\Image\bao_da_airpod.jpg" />
     <Content Include="Content\src\Image\case_airpod.jpg" />
@@ -143,6 +151,8 @@
     <Content Include="Content\src\Image\hop_dung_linh_lien_macbook.png" />
     <Content Include="Content\src\Image\smart_tv.jpg" />
     <Content Include="Content\src\Image\top_t_shirt.jpg" />
+    <Content Include="Content\txt\TextFile1.txt" />
+    <Content Include="Content\txt\XMLFile1.xml" />
     <Content Include="Content\_bundle\indexBundle.css" />
     <Content Include="Content\_bundle\indexBundle.min.css">
       <DependentUpon>indexBundle.css</DependentUpon>
@@ -180,11 +190,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Product\Phone.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Home\ListProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
