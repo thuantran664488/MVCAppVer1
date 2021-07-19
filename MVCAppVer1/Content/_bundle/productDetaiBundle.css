@@ -11626,25 +11626,25 @@ textarea {
 
 @media (min-width: 1200px) and (max-width: 1400px) {
     .container {
-        max-width: 1140px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .container {
-        max-width: 960px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
     .container {
-        max-width: 540px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
     .container {
-        max-width: 300px;
+        max-width: 98%;
     }
 }
 .grid-container {
@@ -11659,13 +11659,19 @@ textarea {
 
 .grid-item1 {
     width: 444px;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 8px;
     padding-right: 16px;
     grid-column: 1 / 2;
     border-right: 1px solid rgb(242, 242, 242);
 }
+
+    .grid-item1 img {
+        width: 100%;
+        height: 444px;
+        object-fit: cover;
+    }
 
 .grid-item2 {
     width: 100%;
@@ -11676,44 +11682,9 @@ textarea {
     grid-column: 2 / 4;
 }
 
-.header-info-item {
-    align-self: center;
+.product-brand {
+    font-size: 20px;
 }
-
-#header-info-item2 {
-    justify-self: right;
-}
-
-.grid-item1 img {
-    width: 100%;
-    height: 444px;
-    object-fit: cover;
-}
-
-.product-action {
-    display: grid;
-    width: 120px;
-    grid-template-columns: auto auto;
-}
-
-.icon-wrap {
-    width: 40px;
-    height: 40px;
-    box-shadow: rgb(47, 83, 151);
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    margin-left: 12px;
-    cursor: pointer;
-    background: white;
-    border-radius: 50%;
-}
-
-    .icon-wrap img {
-        width: 100%;
-        padding: 8px;
-    }
 
 .product-name {
     color: rgb(36, 36, 36);
@@ -11846,6 +11817,7 @@ textarea {
 }
 
 .price-and-icon {
+    font-size: 18px;
     padding: 12px;
     padding-left: 24px;
     background-color: rgb(250, 250, 250);
@@ -11854,7 +11826,7 @@ textarea {
 .icon-content {
     margin-top: 8px;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .product-price {
@@ -11865,6 +11837,10 @@ textarea {
 
 #price {
     width: 100%;
+}
+
+.note-for-customer {
+    font-size: 18px;
 }
 
 button {
@@ -11886,7 +11862,7 @@ button {
 }
 
 .quantity-label {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .btn-change-value {

@@ -11626,25 +11626,25 @@ textarea {
 
 @media (min-width: 1200px) and (max-width: 1400px) {
     .container {
-        max-width: 1140px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .container {
-        max-width: 960px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
     .container {
-        max-width: 540px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
     .container {
-        max-width: 300px;
+        max-width: 98%;
     }
 }
 .grid-container {
@@ -11652,23 +11652,23 @@ textarea {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     column-gap: 0;
-    row-gap: 15px;
+    row-gap: 0;
     justify-items: stretch;
     justify-content: stretch;
     align-content: stretch;
     background-color: white;
 }
 
-a {
+.product-item {
     width: 100%;
     height: 100%;
-    display:grid;
-    grid-template-rows:75% 25%;
+    display: grid;
+    grid-template-rows: 70% 30%;
 }
 
-    a:link {
-        text-decoration: none;
-    }
+a:link {
+    text-decoration: none;
+}
 
 .grid-item {
     cursor: pointer;
@@ -11682,30 +11682,30 @@ a {
     }
 
 .product-item img {
-    width: 225px;
-    height: 225px;
-    justify-self:center;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
 }
 
 .info {
     margin-top: 8px;
-    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 
 .product-name {
-    
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 400;
     margin: 0px 0px 4px;
-    line-height: 20px;
     word-break: break-word;
     color: rgb(36, 36, 36);
 }
 
 .product-price {
-    line-height: 24px;
+    font-size: 24px;
     font-weight: 500;
-    margin: 0px 8px 0px 0px;
+    line-height: 24px;
+    margin: 0;
     color: rgb(36, 36, 36);
     font-weight: bold;
 }
@@ -11714,11 +11714,27 @@ a {
     .grid-container {
         grid-template-columns: auto auto auto auto;
     }
+
+    .product-name {
+        font-size: 24px;
+    }
+
+    .product-price {
+        font-size: 26px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .grid-container {
         grid-template-columns: auto auto auto;
+    }
+
+    .product-name {
+        font-size: 26px;
+    }
+
+    .product-price {
+        font-size: 28px;
     }
 }
 
@@ -11726,10 +11742,30 @@ a {
     .grid-container {
         grid-template-columns: auto auto;
     }
+
+    .product-name {
+        font-size: 2px;
+    }
+
+    .product-price {
+        font-size: 24px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
     .grid-container {
         grid-template-columns: auto;
     }
+
+    .product-name {
+        font-size: 24px;
+    }
+
+    .product-price {
+        font-size: 24px;
+    }
+}
+
+.hidden {
+    display: none;
 }

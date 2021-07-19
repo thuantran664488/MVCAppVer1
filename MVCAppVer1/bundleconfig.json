@@ -20,13 +20,20 @@
   {
     "outputFileName": "Content/js/IndexJS.min.js",
     "inputFiles": [
-      "Content/js/IndexJS.js"
+      "Scripts/js/IndexJS.js"
     ]
   },
   {
     "outputFileName": "Content/js/DetailJS.min.js",
     "inputFiles": [
-      "Content/js/DetailJS.js"
+      "Scripts/js/DetailJS.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/_bundle/indexJS.js",
+    "inputFiles": [
+      "Scripts/jquery-3.6.0.min.js",
+      "Scripts/js/IndexJS.js"
     ]
   }
 ]

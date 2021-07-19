@@ -1,4 +1,7 @@
-﻿let productName = document.getElementsByClassName("product-name");
+﻿'use strict'
+
+let productName = document.getElementsByClassName("product-name");
+
 for (let i = 0; i < productName.length; i++) {
     proElem = productName[i].innerHTML;
     if (proElem.length >= 30) {
@@ -32,3 +35,19 @@ function loadXML() {
     xhttp.open("GET", "Content/txt/XMLFile1.xml");
     xhttp.send();
 }
+
+$("#searchInput").on("keyup", function () {
+    var inputValue = $(this).val().toLowerCase();
+    let obj = $(".product-name");
+    let numberObj = Object.keys(obj);
+    numberObj.forEach(function (value, index) {
+        if (index < numberObj.length - 2) {
+            if (obj[index].textContent.toLowerCase().includes(inputValue)) {
+                console.log(`Search found ${obj[index].textContent}`);
+            } else {
+                obj[index].classList.add('hidden');
+            }
+        }
+    })
+    console.log('--------------')
+})

@@ -32,24 +32,24 @@ textarea {
 
 @media (min-width: 1200px) and (max-width: 1400px) {
     .container {
-        max-width: 1140px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .container {
-        max-width: 960px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
     .container {
-        max-width: 540px;
+        max-width: 98%;
     }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
     .container {
-        max-width: 300px;
+        max-width: 98%;
     }
 }

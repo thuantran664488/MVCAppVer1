@@ -132,13 +132,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\font.css" />
-    <Content Include="Content\js\DetailJS.js" />
-    <Content Include="Content\js\DetailJS.min.js">
+    <Content Include="Scripts\js\DetailJS.js" />
+    <Content Include="Scripts\js\DetailJS.min.js">
       <DependentUpon>DetailJS.js</DependentUpon>
     </Content>
-    <Content Include="Content\js\IndexJS.js" />
+    <Content Include="Scripts\js\IndexJS.js" />
     <Content Include="Content\css\productDetail.css" />
-    <Content Include="Content\js\IndexJS.min.js">
+    <Content Include="Scripts\js\IndexJS.min.js">
       <DependentUpon>IndexJS.js</DependentUpon>
     </Content>
     <Content Include="Content\src\Image\ban_lam_viec.jpg" />
@@ -157,6 +157,10 @@
     <Content Include="Content\_bundle\indexBundle.min.css">
       <DependentUpon>indexBundle.css</DependentUpon>
     </Content>
+    <Content Include="Content\_bundle\indexJS.js" />
+    <Content Include="Content\_bundle\indexJS.min.js">
+      <DependentUpon>indexJS.js</DependentUpon>
+    </Content>
     <Content Include="Content\_bundle\productDetaiBundle.css" />
     <Content Include="Content\_bundle\productDetaiBundle.min.css">
       <DependentUpon>productDetaiBundle.css</DependentUpon>
@@ -174,6 +178,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />

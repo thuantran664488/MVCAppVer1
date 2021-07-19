@@ -10,11 +10,19 @@
     <link href="~/Content/_bundle/indexBundle.min.css" rel="stylesheet" />
 }
 
-<p id="demo">
-    Let Ajax change this text
-</p>
-<button id="btn-ajax" onclick="loadDoc()">Click to load Txt</button>
-<button onclick="loadXML()">Click to load XML</button>
+<div>
+    <p id="demo">
+        Let Ajax change this text
+    </p>
+    <button id="btn-ajax" onclick="loadDoc()">Click to load Txt</button>
+    <button onclick="loadXML()">Click to load XML</button>
+</div>
+
+<div>
+    <input id="searchInput" type="text" placeholder="Search..">
+</div>
+
+
 <div class="grid-container">
     @foreach (var product in Model)
     {
@@ -24,5 +32,5 @@
 
 </div>
 @section scripts{
-    <script src="~/Content/js/IndexJS.min.js"></script>
+    <script src="~/Content/_bundle/indexJS.min.js"></script>
 }
