@@ -9,24 +9,36 @@ namespace MVCAppVer1.Controllers
 {
     public class HomeController : Controller
     {
+        int start = 0;
+        int end = 5;
         public ActionResult Index()
         {
-            var products = GetListProducts();
+            var totalProduct = GetListProducts();
+            var products = new List<Product>();
+
+            for (int i = start; i < end; i++)
+            {
+                products.Add(totalProduct[i]);
+            }
             return View(products);
         }
 
-        public ActionResult About()
+        public ActionResult fetchData()
         {
-            ViewBag.Message = "Your application description page.";
+            start += 5;
+            end += 5;
 
-            return View();
-        }
+            var totalProduct = GetListProducts();
+            var products = new List<Product>();
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
+            if (totalProduct == null || totalProduct.Count == 0 || end > totalProduct.Count) return Content(totalProduct.Count + " " + end);
 
-            return View();
+            for (int i = start; i < end; i++)
+            {
+                products.Add(totalProduct[i]);
+            }
+            return PartialView("ListProduct", products);
+
         }
 
         public List<Product> GetListProducts()

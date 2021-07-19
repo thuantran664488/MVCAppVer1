@@ -1,15 +1,18 @@
-﻿@model MVCAppVer1.Models.Product
-<div class="grid-item">
-    @{var route = "/product/" + Model.metaTitle + "-" + Model.Id;
-        var img_url = Model.url; }
-    <a class="product-item"
-       href="@route">
-        <img src="@img_url " alt="@Model.Name" />
-        <div class="info">
-            <div class="product-name" id="name">@Model.Name</div>
-            <div class="product-price">
-                @string.Format("{0:0,0.000}", @Model.price) <span style="text-decoration: underline">đ</span>
+﻿@*@model MVCAppVer1.Models.Product*@
+@model IEnumerable<MVCAppVer1.Models.Product>
+
+@foreach (var product in Model)
+{
+    <div class="grid-item">
+        @{var route = "/product/" + product.metaTitle + "-" + product.Id;
+            var img_url = product.url; }
+        <a class="product-item"
+           href="@route">
+            <img src="@img_url " alt="@product.Name" />
+            <div class="info">
+                <div class="product-name" id="name">@product.Name</div>
+                <div class="product-price">@string.Format("{0:0,0.000}", product.price) <span style="text-decoration: underline">đ</span></div>
             </div>
-        </div>
-    </a>
-</div>
+        </a>
+    </div>
+}

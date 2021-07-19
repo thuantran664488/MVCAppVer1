@@ -30,7 +30,7 @@ function loadXML() {
     xhttp.send();
 }
 
-$("#searchInput").on("keyup", function () {
+$("#searchInput").on("keydown", function () {
     var inputValue = $(this).val().toLowerCase();
     let obj = $(".product-name");
     let numberObj = Object.keys(obj);
@@ -38,10 +38,16 @@ $("#searchInput").on("keyup", function () {
         if (index < numberObj.length - 2) {
             if (obj[index].textContent.toLowerCase().includes(inputValue)) {
                 console.log(`Search found ${obj[index].textContent}`);
-            } else {
-                obj[index].classList.add('hidden');
             }
         }
     })
     console.log('--------------')
+})
+
+$("#btnViewMore").click(function () {
+    let url = window.location.href + 'home/fetchData';
+    $.get(url, function (response, status) {
+        console.log(response);
+        $('.grid-container').append(response);
+    })
 })
