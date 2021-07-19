@@ -41,15 +41,23 @@ a:link {
 .info {
     margin-top: 8px;
     letter-spacing: 1px;
+    display: grid;
+    grid-template-rows: auto auto;
+    overflow: hidden;
 }
 
 
 .product-name {
+    margin: auto 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     font-size: 20px;
     font-weight: 400;
-    margin: 0px 0px 4px;
     word-break: break-word;
     color: rgb(36, 36, 36);
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .product-price {
@@ -95,7 +103,7 @@ a:link {
     }
 
     .product-name {
-        font-size: 2px;
+        font-size: 26px;
     }
 
     .product-price {
