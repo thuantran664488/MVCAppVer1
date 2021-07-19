@@ -23,15 +23,15 @@ namespace MVCAppVer1.Controllers
             return View(products);
         }
 
-        public ActionResult fetchData()
+        public ActionResult fetchData(int id)
         {
-            start += 5;
-            end += 5;
+            start = id - 5;
+            end = id;
 
             var totalProduct = GetListProducts();
             var products = new List<Product>();
 
-            if (totalProduct == null || totalProduct.Count == 0 || end > totalProduct.Count) return Content(totalProduct.Count + " " + end);
+            if (totalProduct == null || totalProduct.Count == 0 || end > totalProduct.Count) return null;
 
             for (int i = start; i < end; i++)
             {

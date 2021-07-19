@@ -3,6 +3,8 @@
 
 'use strict'
 
+let end = 5;
+
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
@@ -45,8 +47,9 @@ $("#searchInput").on("keydown", function () {
 })
 
 $("#btnViewMore").click(function () {
-    let url = window.location.href + 'home/fetchData';
-    $.get(url, function (response, status) {
+    end += 5;
+    let url = window.location.href + 'home/fetchData/' + end;
+    $.get(url, { end }, function (response, status) {
         console.log(response);
         $('.grid-container').append(response);
     })
