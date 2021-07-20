@@ -9,12 +9,13 @@ namespace MVCAppVer1.Controllers
 {
     public class HomeController : Controller
     {
-        int start = 0;
-        int end = 5;
         public ActionResult Index()
         {
             var totalProduct = GetListProducts();
             var products = new List<Product>();
+
+            int start = 0;
+            int end = 5;
 
             for (int i = start; i < end; i++)
             {
@@ -25,8 +26,8 @@ namespace MVCAppVer1.Controllers
 
         public ActionResult fetchData(int id)
         {
-            start = id - 5;
-            end = id;
+            var start = id - 5;
+            var end = id;
 
             var totalProduct = GetListProducts();
             var products = new List<Product>();
