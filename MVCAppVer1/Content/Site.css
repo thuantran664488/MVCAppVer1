@@ -1,17 +1,193 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 50px;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: rgb(36, 36, 36)
-
 }
 
+a {
+    text-decoration: none;
+}
+
+header {
+    background: rgb(1, 127, 255);
+}
+
+    header a {
+        color: white
+    }
+
+.header-content {
+    padding: 32px 15px;
+    width: 1270px;
+    margin: 0 auto;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+}
+
+.logo-and-category {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+    .logo-and-category .logo {
+        width: 60px;
+        height: 40px;
+        justify-self: center;
+        align-self: center;
+    }
+
+        .logo-and-category .logo img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .logo-and-category .category-dropdown {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 10px;
+        align-self: center;
+        justify-self: center;
+    }
+
+        .logo-and-category .category-dropdown:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-and-category .category-dropdown img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-and-category .category-dropdown .category-lable {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .logo-and-category .category-dropdown .product-lable {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 500;
+        }
+
+        .logo-and-category .category-dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+        }
+
+        .logo-and-category .category-dropdown:hover .dropdown-content {
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+
+.dropdown-content a {
+    display: block;
+    color: black;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 80% 15%;
+    justify-content: center;
+}
+
+    .search-form input {
+        border: 0px;
+        font-size: 13px;
+        height: 40px;
+        border-radius: 2px 0px 0px 2px;
+        padding: 0px 12px;
+    }
+
+    .search-form .search {
+        height: 40px;
+        cursor: pointer;
+        border: 0px;
+        background: rgb(12,92,182);
+        border-radius: 0px 2px 2px 0px;
+        color: white;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 1px 6px;
+        display: grid;
+        grid-template-columns: 10% 60%;
+        align-content: center;
+        justify-content: center;
+    }
+
+        .search-form .search:hover {
+            color: white;
+        }
+
+    .search-form button img {
+        height: 20px;
+        width: 20px;
+        justify-self: end;
+    }
+
+.user-shortcut {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+    .user-shortcut .account-container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+        .user-shortcut .account-container:hover {
+            color: white;
+        }
+
+    .user-shortcut img {
+        width: 32px;
+        height: 32px;
+        justify-self: center;
+    }
+
+    .user-shortcut .account-lable {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .user-shortcut .account-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+
+    .user-shortcut .cart-item {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+        .user-shortcut .cart-item:hover {
+            color: white;
+        }
+
+        .user-shortcut .cart-item .cart-lable {
+            align-self: end;
+        }
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 32px 15px;
     width: 1270px;
     margin: 0 auto;
 }
@@ -27,8 +203,35 @@
 input,
 select,
 textarea {
-    max-width: 280px;
 }
+
+.footer-content {
+    padding: 32px 15px;
+    width: 1270px;
+    margin: 0 auto;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    justify-content: center;
+    grid-column-gap: 12px;
+}
+
+    .footer-content div h4 {
+        margin: 0px 0px 17px;
+        color: rgb(51, 51, 51);
+        font-size: 13px;
+        font-weight: 500;
+        font-stretch: normal;
+        text-transform: uppercase;
+    }
+
+    .footer-content div a {
+        color: rgb(51, 51, 51);
+        font-size: 12px;
+        font-weight: normal;
+        display: block;
+    }
+
 
 @media (min-width: 1200px) and (max-width: 1400px) {
     .container {

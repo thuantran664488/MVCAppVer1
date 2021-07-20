@@ -132,6 +132,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\font.css" />
+    <Content Include="Content\src\icon\cart_icon.png" />
+    <Content Include="Content\src\icon\hamburger_menu_icon.png" />
+    <Content Include="Content\src\icon\search_icon.png" />
+    <Content Include="Content\src\icon\tiki_logo_icon.png" />
+    <Content Include="Content\src\icon\user_icon.png" />
     <Content Include="Scripts\js\DetailJS.js" />
     <Content Include="Scripts\js\DetailJS.min.js">
       <DependentUpon>DetailJS.js</DependentUpon>
@@ -201,7 +206,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\src\icon\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
