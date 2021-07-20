@@ -3,7 +3,7 @@
 
 'use strict'
 
-let end = 5;
+
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
@@ -46,11 +46,25 @@ $("#searchInput").on("keydown", function () {
     console.log('--------------')
 })
 
+let PageIndex = 1;
+
 $("#btnViewMore").click(function () {
-    end += 5;
-    let url = window.location.href + 'home/fetchData/' + end;
-    $.get(url, { end }, function (response, status) {
-        console.log(response);
-        $('.grid-container').append(response);
-    })
+    $.ajax({
+        type: 'POST', //POST
+        url: '/home/fetchData/',
+        data: { PageIndex: PageIndex++ },
+        cache: false,
+        success: function (result) {
+            if (result.html != null && result.remain >= 0) {
+                $('.grid-container').append(result.html);
+                if (result.remain == 0) {
+                    $('#btnViewMore').remove();
+                }
+            }
+        }
+    });
+    //$.get(url, { end }, function (response, status) {
+    //    console.log(response);
+    //    $('.grid-container').append(response);
+    //})
 })

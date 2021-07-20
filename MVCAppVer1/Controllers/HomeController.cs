@@ -4,41 +4,64 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCAppVer1.Models;
+using System.IO;
 
 namespace MVCAppVer1.Controllers
 {
     public class HomeController : Controller
     {
+        private const int PageSize = 1;
+
+        static string RenderViewToString(ControllerContext context, string viewPath, object model = null, bool partial = false)
+        {
+            // first find the ViewEngine for this view
+            ViewEngineResult viewEngineResult = null;
+            if (partial)
+                viewEngineResult = ViewEngines.Engines.FindPartialView(context, viewPath);
+            else
+                viewEngineResult = ViewEngines.Engines.FindView(context, viewPath, null);
+
+            if (viewEngineResult == null)
+                throw new FileNotFoundException("View cannot be found.");
+
+            // get the view and attach the model to view data
+            var view = viewEngineResult.View;
+            context.Controller.ViewData.Model = model;
+
+            string result = null;
+
+            using (var sw = new StringWriter())
+            {
+                var ctx = new ViewContext(context, view, context.Controller.ViewData, context.Controller.TempData, sw);
+                view.Render(ctx, sw);
+                result = sw.ToString();
+            }
+
+            return result;
+        }
+
         public ActionResult Index()
         {
             var totalProduct = GetListProducts();
-            var products = new List<Product>();
 
-            int start = 0;
-            int end = 5;
-
-            for (int i = start; i < end; i++)
-            {
-                products.Add(totalProduct[i]);
-            }
-            return View(products);
+            return View(totalProduct.Take(PageSize));
         }
 
-        public ActionResult fetchData(int id)
+        public ActionResult fetchData(int PageIndex)
         {
-            var start = id - 5;
-            var end = id;
-
             var totalProduct = GetListProducts();
-            var products = new List<Product>();
+            var products = totalProduct.Skip(PageSize * PageIndex).Take(PageSize);
+            var remain = totalProduct.Count - PageSize * PageIndex - PageSize;
+            if (remain < 0) remain = 0;
 
-            if (totalProduct == null || totalProduct.Count == 0 || end > totalProduct.Count) return null;
-
-            for (int i = start; i < end; i++)
+            var JSON = Json(new
             {
-                products.Add(totalProduct[i]);
-            }
-            return PartialView("ListProduct", products);
+                remain = remain,
+                html = RenderViewToString(ControllerContext, "~/Views/Home/ListProduct.cshtml", products, true)
+            });
+
+            //return PartialView("ListProduct", totalProduct.Skip(PageSize * PageIndex).Take(PageSize));
+            return JSON;
 
         }
 
