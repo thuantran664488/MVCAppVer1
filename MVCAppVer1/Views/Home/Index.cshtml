@@ -22,7 +22,7 @@
     <input id="searchInput" type="text" placeholder="Search..">
 </div>
 
-<div>
+<div class="container list-product">
     <div class="grid-container">
         @*@foreach (var product in Model)
             {
@@ -31,7 +31,7 @@
             }*@
         @Html.Partial("~/Views/Home/ListProduct.cshtml", Model)
     </div>
-    <button id="btnViewMore">Xem thêm</button>
+    <button class="btn view-more" id="btnViewMore">Xem thêm</button>
 
 </div>
 @section scripts{

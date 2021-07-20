@@ -1,4 +1,11 @@
-﻿.grid-container {
+﻿.container .list-product {
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+}
+
+.grid-container {
     padding: 16px 8px;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -7,7 +14,6 @@
     justify-items: stretch;
     justify-content: stretch;
     align-content: stretch;
-    background-color: white;
 }
 
 .product-item {
@@ -128,3 +134,21 @@ a:link {
 .hidden {
     display: none;
 }
+
+.view-more {
+    margin-bottom: 16px;
+    align-self: center;
+    border: 1px solid rgb(13,92,182);
+    border-radius: 4px;
+    color: rgb(13,92,182);
+    text-align: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: 240px;
+    font-size: 13px;
+}
+
+    .view-more:hover {
+        color: white;
+        background: rgb(13,92,182);
+    }
