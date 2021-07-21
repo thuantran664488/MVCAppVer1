@@ -10,7 +10,7 @@ namespace MVCAppVer1.Controllers
 {
     public class HomeController : Controller
     {
-        private const int PageSize = 1;
+        private const int PageSize = 10;
 
         static string RenderViewToString(ControllerContext context, string viewPath, object model = null, bool partial = false)
         {
