@@ -20,7 +20,7 @@ namespace MVCAppVer1.Controllers
         {
             if (string.IsNullOrEmpty(id)) return null;
 
-            var lst = GetListProducts();
+            var lst = Helper.GetListProducts();
             if (lst == null || lst.Count == 0) return null;
 
             var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(id) && p.metaTitle.Equals(url));
