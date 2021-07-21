@@ -7,7 +7,14 @@ namespace MVCAppVer1.Controllers
 {
     public static class Helper
     {
-
+        /// <summary>
+        /// CONVERT VIEW TO STRING
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="viewPath"></param>
+        /// <param name="model"></param>
+        /// <param name="partial"></param>
+        /// <returns></returns>
         public static string RenderViewToString(ControllerContext context, string viewPath, object model = null, bool partial = false)
         {
             // first find the ViewEngine for this view
@@ -36,6 +43,10 @@ namespace MVCAppVer1.Controllers
             return result;
         }
 
+        /// <summary>
+        /// GET LIST ALL PRODUCTS
+        /// </summary>
+        /// <returns></returns>
         public static List<Product> GetListProducts()
         {
             var products = new List<Product>

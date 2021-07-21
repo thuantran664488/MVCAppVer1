@@ -13,7 +13,10 @@ namespace MVCAppVer1.Controllers
         private const int PageSize = 5;
 
 
-
+        /// <summary>
+        /// ROUTE TO THE HOME PAGE
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             var totalProduct = Helper.GetListProducts();
@@ -21,6 +24,11 @@ namespace MVCAppVer1.Controllers
             return View(totalProduct.Take(PageSize));
         }
 
+        /// <summary>
+        /// FETCH DATE USING BUTTON VIEWMORE IN HOMEPAGE
+        /// </summary>
+        /// <param name="PageIndex"></param>
+        /// <returns></returns>
         public ActionResult fetchData(int PageIndex)
         {
             var totalProduct = Helper.GetListProducts();

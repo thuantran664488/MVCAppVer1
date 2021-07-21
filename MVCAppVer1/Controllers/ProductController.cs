@@ -7,15 +7,14 @@ using MVCAppVer1.Models;
 
 namespace MVCAppVer1.Controllers
 {
-    public class ProductController : HomeController
+    public class ProductController : Controller
     {
-        // GET: Product/Phone
-        public ActionResult Phone()
-        {
-            var iPhone = new Product() { Name = "IPhone X" };
-            return View(iPhone);
-        }
-
+        /// <summary>
+        /// ROUTE THE DETAIL PAGE
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Detail(string url, string id)
         {
             if (string.IsNullOrEmpty(id)) return null;
