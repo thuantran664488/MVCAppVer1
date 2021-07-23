@@ -1,17 +1,16 @@
-﻿@model IEnumerable<MVCAppVer1.Models.Product>
-@if (Model != null && Model.Any())
+﻿@if (Model != null)
 {
     foreach (var product in Model)
     {
+        var route = "/product/" + product.Url + "-" + product.Id;
+        var img_url = "/Content/src/Image/" + product.Thumb;
         <div class="grid-item">
-            @{var route = "/product/" + product.metaTitle + "-" + product.Id;
-                var img_url = product.url; }
             <a class="product-item"
                href="@route">
                 <img src="@img_url " alt="@product.Name" />
                 <div class="info">
                     <div class="product-name" id="name">@product.Name</div>
-                    <div class="product-price">@string.Format("{0:0,0.000}", product.price) <span style="text-decoration: underline">đ</span></div>
+                    <div class="product-price">@string.Format("{0:0,0.000}", product.Price) <span style="text-decoration: underline">đ</span></div>
                 </div>
             </a>
         </div>

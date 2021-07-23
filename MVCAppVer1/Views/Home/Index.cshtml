@@ -1,9 +1,7 @@
-﻿@model IEnumerable<MVCAppVer1.Models.Product>
+﻿@model IEnumerable<Webservice.ProductService.ProductDTO>
 
 @{
     ViewBag.Title = "Demo shop - Trần Đình Thuận";
-    @*@Styles.Render("~/Content/css/index.css");
-        @Styles.Render("~/Content/css")*@
 }
 
 @section css{
@@ -16,11 +14,6 @@
 
 <div class="container list-product">
     <div class="grid-container">
-        @*@foreach (var product in Model)
-            {
-                @Html.Partial("~/Views/Home/ListProduct.cshtml", Model);
-
-            }*@
         @Html.Partial("~/Views/Home/ListProduct.cshtml", Model)
     </div>
     <button class="btn view-more" id="btnViewMore">Xem thêm</button>

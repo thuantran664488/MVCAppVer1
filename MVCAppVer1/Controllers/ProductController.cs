@@ -19,11 +19,13 @@ namespace MVCAppVer1.Controllers
         {
             if (string.IsNullOrEmpty(id)) return null;
 
-            var lst = Helper.GetListProducts();
-            if (lst == null || lst.Count == 0) return null;
+            var getAll = Webservice.Helper.getProducts(20, 0);
+            var lst = getAll.ListProducts;
+            if (lst == null || getAll.Total == 0) return null;
 
-            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(id) && p.metaTitle.Equals(url));
+            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(id) && p.Url.Equals(url));
             if (obj == null) return null;
+
             return View(obj);
         }
     }

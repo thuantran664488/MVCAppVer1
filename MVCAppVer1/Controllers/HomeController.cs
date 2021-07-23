@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using MVCAppVer1.Models;
 using System.IO;
+using Webservice;
 
 namespace MVCAppVer1.Controllers
 {
@@ -19,9 +20,12 @@ namespace MVCAppVer1.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            var totalProduct = Helper.GetListProducts();
 
-            return View(totalProduct.Take(PageSize));
+            //return View(totalProduct.Take(PageSize));
+            var getProducts = Webservice.Helper.getProducts(PageSize, 0);
+            var listProducts = getProducts.ListProducts;
+
+            return View(listProducts);
         }
 
         /// <summary>
@@ -31,15 +35,14 @@ namespace MVCAppVer1.Controllers
         /// <returns></returns>
         public ActionResult fetchData(int PageIndex)
         {
-            var totalProduct = Helper.GetListProducts();
-            var products = totalProduct.Skip(PageSize * PageIndex).Take(PageSize);
-            var remain = totalProduct.Count - PageSize * PageIndex - PageSize;
-            if (remain < 0) remain = 0;
+            var getProducts = Webservice.Helper.getProducts(PageSize, PageIndex);
+            var listProducts = getProducts.ListProducts;
+            var remain = getProducts.Remain;
 
             var JSON = Json(new
             {
                 remain = remain,
-                html = Helper.RenderViewToString(ControllerContext, "~/Views/Home/ListProduct.cshtml", products, true)
+                html = Helper.RenderViewToString(ControllerContext, "~/Views/Home/ListProduct.cshtml", listProducts, true)
             });
 
             //return PartialView("ListProduct", totalProduct.Skip(PageSize * PageIndex).Take(PageSize));

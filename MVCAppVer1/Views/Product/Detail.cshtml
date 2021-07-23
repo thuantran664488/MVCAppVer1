@@ -1,4 +1,4 @@
-﻿@model MVCAppVer1.Models.Product
+﻿@model Webservice.ProductService.ProductDTO
 @{
     ViewBag.Title = "Detail";
 }
@@ -6,10 +6,12 @@
 @section css{
     <link href="~/Content/_bundle/productDetaiBundle.min.css" rel="stylesheet" />
 }
-
+@{
+    var img_url = "/Content/src/Image/" + Model.Thumb;
+}
 <div class="grid-container">
     <div class="grid-item1">
-        <img src="@Model.url" alt="@Model.Name" />
+        <img src="@img_url" alt="@Model.Name" />
     </div>
     <div class="grid-item2">
         <div class="header-info">
@@ -28,7 +30,7 @@
             <div class="body-info-item" id="body-info-item1">
                 <div class="price-and-icon">
                     <div class="product-price">
-                        <span id="price">@string.Format("{0:0,0.000}", @Model.price) <span style="text-decoration: underline">đ</span></span>
+                        <span id="price">@string.Format("{0:0,0.000}", @Model.Price) <span style="text-decoration: underline">đ</span></span>
                     </div>
                     <div class="product-icon">
                         <div class="icon-content">

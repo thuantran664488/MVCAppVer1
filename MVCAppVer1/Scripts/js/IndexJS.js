@@ -29,20 +29,6 @@ function loadXML() {
     xhttp.send();
 }
 
-$("#searchInput").on("keydown", function () {
-    var inputValue = $(this).val().toLowerCase();
-    let obj = $(".product-name");
-    let numberObj = Object.keys(obj);
-    numberObj.forEach(function (value, index) {
-        if (index < numberObj.length - 2) {
-            if (obj[index].textContent.toLowerCase().includes(inputValue)) {
-                console.log(`Search found ${obj[index].textContent}`);
-            }
-        }
-    })
-    console.log('--------------')
-})
-
 let PageIndex = 1;
 
 $("#btnViewMore").click(function () {
@@ -60,8 +46,23 @@ $("#btnViewMore").click(function () {
             }
         }
     });
-    //$.get(url, { end }, function (response, status) {
-    //    console.log(response);
-    //    $('.grid-container').append(response);
-    //})
 })
+
+//$("#searchInput").on("keydown", function () {
+//    var inputValue = $(this).val().toLowerCase();
+//    let obj = $(".product-name");
+//    let numberObj = Object.keys(obj);
+//    numberObj.forEach(function (value, index) {
+//        if (index < numberObj.length - 2) {
+//            if (obj[index].textContent.toLowerCase().includes(inputValue)) {
+//                console.log(`Search found ${obj[index].textContent}`);
+//            }
+//        }
+//    })
+//    console.log('--------------')
+//})
+
+$("#btn-search").click(function () {
+    alert("btn-seach clicked");
+})
+

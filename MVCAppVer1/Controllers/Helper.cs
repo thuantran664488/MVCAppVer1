@@ -2,6 +2,7 @@
 using MVCAppVer1.Models;
 using System.Web.Mvc;
 using System.IO;
+using Webservice;
 
 namespace MVCAppVer1.Controllers
 {
@@ -49,6 +50,8 @@ namespace MVCAppVer1.Controllers
         /// <returns></returns>
         public static List<Product> GetListProducts()
         {
+            //var productSvc = new Class1();
+
             var products = new List<Product>
             {
                 new Product

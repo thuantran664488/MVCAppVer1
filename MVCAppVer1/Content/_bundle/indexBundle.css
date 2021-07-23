@@ -12066,6 +12066,8 @@ a:link {
     padding: 8px;
     justify-self: stretch;
     font-size: 0.6rem;
+    /*    width: 240px;
+    height: 330px;*/
 }
 
     .grid-item:hover {
@@ -12114,6 +12116,11 @@ a:link {
         grid-template-columns: auto auto auto auto;
     }
 
+    /*    .grid-item {
+        width: 290px;
+        height: 395px;
+    }*/
+
     .product-name {
         font-size: 24px;
     }
@@ -12127,6 +12134,11 @@ a:link {
     .grid-container {
         grid-template-columns: auto auto auto;
     }
+
+    /*    .grid-item {
+        width: 345px;
+        height: 455px;
+    }*/
 
     .product-name {
         font-size: 26px;
@@ -12142,6 +12154,11 @@ a:link {
         grid-template-columns: auto auto;
     }
 
+    /*    .grid-item {
+        width: 435px;
+        height: 545px;
+    }*/
+
     .product-name {
         font-size: 26px;
     }
@@ -12155,6 +12172,11 @@ a:link {
     .grid-container {
         grid-template-columns: auto;
     }
+
+    /*    .grid-item {
+        width: 440px;
+        height: 545px;
+    }*/
 
     .product-name {
         font-size: 24px;
