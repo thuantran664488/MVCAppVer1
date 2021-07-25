@@ -20,12 +20,6 @@ namespace MVCAppVer1
                 );
 
             routes.MapRoute(
-                name: "Home",
-                url: "product/detail",
-                defaults: new { controller = "Product", action = "Index" }
-                );
-
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

@@ -1,9 +1,14 @@
-﻿@if (Model != null)
+﻿@model Webservice.ProductService.ProductDTOResponse
+
+
+@if (Model != null)
 {
-    foreach (var product in Model)
+    var listProducts = Model.ListProducts;
+    foreach (var product in listProducts)
     {
         var route = "/product/" + product.Url + "-" + product.Id;
         var img_url = "/Content/src/Image/" + product.Thumb;
+
         <div class="grid-item">
             <a class="product-item"
                href="@route">
@@ -16,3 +21,4 @@
         </div>
     }
 }
+

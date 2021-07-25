@@ -12037,6 +12037,8 @@ textarea {
     display: grid;
     grid-template-rows: auto auto;
     justify-items: center;
+    justify-content: start;
+    padding: 8px 12px;
 }
 
 .grid-container {
@@ -12066,8 +12068,8 @@ a:link {
     padding: 8px;
     justify-self: stretch;
     font-size: 0.6rem;
-    /*    width: 240px;
-    height: 330px;*/
+    width: 240px;
+    height: 331px;
 }
 
     .grid-item:hover {
@@ -12116,10 +12118,12 @@ a:link {
         grid-template-columns: auto auto auto auto;
     }
 
-    /*    .grid-item {
-        width: 290px;
-        height: 395px;
-    }*/
+    .grid-item {
+        max-width: 293px;
+        max-height: 397px;
+        min-width: 271px;
+        min-height: 375px;
+    }
 
     .product-name {
         font-size: 24px;
@@ -12135,10 +12139,12 @@ a:link {
         grid-template-columns: auto auto auto;
     }
 
-    /*    .grid-item {
-        width: 345px;
-        height: 455px;
-    }*/
+    .grid-item {
+        max-width: 362px;
+        max-height: 470px;
+        min-width: 294px;
+        min-height: 404px;
+    }
 
     .product-name {
         font-size: 26px;
@@ -12154,10 +12160,12 @@ a:link {
         grid-template-columns: auto auto;
     }
 
-    /*    .grid-item {
-        width: 435px;
-        height: 545px;
-    }*/
+    .grid-item {
+        max-width: 441px;
+        max-height: 551px;
+        min-width: 242px;
+        min-height: 352px;
+    }
 
     .product-name {
         font-size: 26px;
@@ -12168,15 +12176,17 @@ a:link {
     }
 }
 
-@media (min-width: 320px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 576px) {
     .grid-container {
         grid-template-columns: auto;
     }
 
-    /*    .grid-item {
-        width: 440px;
-        height: 545px;
-    }*/
+    .grid-item {
+        max-width: 482px;
+        max-height: 586px;
+        min-width: 239px;
+        min-height: 343px;
+    }
 
     .product-name {
         font-size: 24px;
@@ -12192,7 +12202,6 @@ a:link {
 }
 
 .view-more {
-    margin-bottom: 16px;
     align-self: center;
     border: 1px solid rgb(13,92,182);
     border-radius: 4px;
@@ -12202,6 +12211,7 @@ a:link {
     cursor: pointer;
     width: 240px;
     font-size: 13px;
+    justify-self: center;
 }
 
     .view-more:hover {

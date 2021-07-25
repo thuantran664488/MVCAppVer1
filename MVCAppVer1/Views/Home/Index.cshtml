@@ -1,11 +1,11 @@
-﻿@model IEnumerable<Webservice.ProductService.ProductDTO>
+﻿@model Webservice.ProductService.ProductDTOResponse
 
 @{
     ViewBag.Title = "Demo shop - Trần Đình Thuận";
 }
 
 @section css{
-    <link href="~/Content/_bundle/indexBundle.min.css" rel="stylesheet" />
+    <link href="~/Content/_bundle/_css_bundle/index.min.css" rel="stylesheet" />
 }
 
 @*<div>
@@ -13,12 +13,26 @@
     </div>*@
 
 <div class="container list-product">
-    <div class="grid-container">
-        @Html.Partial("~/Views/Home/ListProduct.cshtml", Model)
-    </div>
-    <button class="btn view-more" id="btnViewMore">Xem thêm</button>
 
+    @if (Model != null)
+    {
+        <div class="search-result-lable hidden">Kết quả tìm kiếm cho "<span style="font-weight: bold" class="search-keyword"></span>"</div>
+        <div class="grid-container">
+            @Html.Partial("~/Views/Home/ListProduct.cshtml", Model)
+        </div>
+    }
+    else
+    {
+        <div>Không tìm thấy yêu cầu của bạn</div>
+    }
+
+    @if (Model != null && Model.Remain > 0)
+    {
+        <button class="btn view-more" id="btnViewMore">Xem thêm <span id="remain">@Model.Remain</span> sản phẩm</button>
+    }
 </div>
+
+
 @section scripts{
-    <script src="~/Content/_bundle/indexJS.min.js"></script>
+    <script src="~/Content/_bundle/_js_bundle/indexJS.min.js"></script>
 }

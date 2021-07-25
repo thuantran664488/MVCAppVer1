@@ -144,6 +144,22 @@
     <Content Include="Content\src\icon\tiki_logo_icon.png" />
     <Content Include="Content\src\icon\user_icon.png" />
     <Content Include="Content\src\Image\11.jpg" />
+    <Content Include="Content\_bundle\_css_bundle\index.css" />
+    <Content Include="Content\_bundle\_css_bundle\index.min.css">
+      <DependentUpon>index.css</DependentUpon>
+    </Content>
+    <Content Include="Content\_bundle\_css_bundle\productDetail.css" />
+    <Content Include="Content\_bundle\_css_bundle\productDetail.min.css">
+      <DependentUpon>productDetail.css</DependentUpon>
+    </Content>
+    <Content Include="Content\_bundle\_js_bundle\indexJS.js" />
+    <Content Include="Content\_bundle\_js_bundle\indexJS.min.js">
+      <DependentUpon>indexJS.js</DependentUpon>
+    </Content>
+    <Content Include="Content\_bundle\_js_bundle\productDetail.js" />
+    <Content Include="Content\_bundle\_js_bundle\productDetail.min.js">
+      <DependentUpon>productDetail.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\js\DetailJS.js" />
     <Content Include="Scripts\js\DetailJS.min.js">
       <DependentUpon>DetailJS.js</DependentUpon>
@@ -165,18 +181,6 @@
     <Content Include="Content\src\Image\top_t_shirt.jpg" />
     <Content Include="Content\txt\TextFile1.txt" />
     <Content Include="Content\txt\XMLFile1.xml" />
-    <Content Include="Content\_bundle\indexBundle.css" />
-    <Content Include="Content\_bundle\indexBundle.min.css">
-      <DependentUpon>indexBundle.css</DependentUpon>
-    </Content>
-    <Content Include="Content\_bundle\indexJS.js" />
-    <Content Include="Content\_bundle\indexJS.min.js">
-      <DependentUpon>indexJS.js</DependentUpon>
-    </Content>
-    <Content Include="Content\_bundle\productDetaiBundle.css" />
-    <Content Include="Content\_bundle\productDetaiBundle.min.css">
-      <DependentUpon>productDetaiBundle.css</DependentUpon>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -199,6 +203,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\SiteJS.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

@@ -19,6 +19,12 @@ namespace Webservice
             return getProducts;
 
         }
-    }
 
+        public static ProductService.ProductDTOResponse searchProduct(int PageSize, int PageIndex, string keyword, double minPrice, double maxPrice)
+        {
+            var getProducts = productSvc.SearchProducts(PageSize, PageIndex, keyword, minPrice, maxPrice);
+            return getProducts;
+        }
+
+    }
 }
