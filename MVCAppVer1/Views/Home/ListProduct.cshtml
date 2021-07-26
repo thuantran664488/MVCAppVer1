@@ -1,15 +1,24 @@
-﻿@model MVCAppVer1.Models.Product
-<div class="grid-item">
-    @{var route = "/product/" + Model.metaTitle + "-" + Model.Id;
-        var img_url = Model.url; }
-    <a class="product-item"
-       href="@route">
-        <img src="@img_url " alt="@Model.Name" />
-        <div class="info">
-            <div class="product-name" id="name">@Model.Name</div>
-            <div class="product-price">
-                @string.Format("{0:0,0.000}", @Model.price) <span style="text-decoration: underline">đ</span>
-            </div>
+﻿@model Webservice.ProductService.ProductDTOResponse
+
+
+@if (Model != null)
+{
+    var listProducts = Model.ListProducts;
+    foreach (var product in listProducts)
+    {
+        var route = "/product/" + product.Url + "-" + product.Id;
+        var img_url = "/Content/src/Image/" + product.Thumb;
+
+        <div class="grid-item">
+            <a class="product-item"
+               href="@route">
+                <img src="@img_url " alt="@product.Name" />
+                <div class="info">
+                    <div class="product-name" id="name">@product.Name</div>
+                    <div class="product-price">@string.Format("{0:0,0.000}", product.Price) <span style="text-decoration: underline">đ</span></div>
+                </div>
+            </a>
         </div>
-    </a>
-</div>
+    }
+}
+

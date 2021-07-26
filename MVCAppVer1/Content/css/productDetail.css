@@ -3,7 +3,7 @@
     padding: 8px;
     display: grid;
     grid-template-columns: auto auto auto;
-    justify-content:stretch;
+    justify-content: stretch;
     row-gap: 15px;
 }
 
@@ -26,7 +26,7 @@
 
 .grid-item2 {
     width: 100%;
-    justify-self:start;
+    justify-self: start;
     margin: 16px 0px 8px 0px;
     padding-left: 12px;
     padding-right: 12px;
@@ -74,9 +74,9 @@
     height: 44px;
 }
 
-.seller-logo img {
-    border-radius: 50%;
-}
+    .seller-logo img {
+        border-radius: 50%;
+    }
 
 .seller-name {
     align-self: center;
@@ -90,9 +90,9 @@
 }
 
 #seller-detail-review {
-    display:grid;
+    display: grid;
     grid-template-rows: auto auto;
-    justify-items:center;
+    justify-items: center;
 }
 
 #seller-detail-follower {
@@ -121,10 +121,10 @@
 }
 
 .seller-action {
-    margin-top:8px;
+    margin-top: 8px;
     display: grid;
     grid-template-columns: 50% 50%;
-    justify-items:center;
+    justify-items: center;
 }
 
 .seller-action-item {
@@ -135,7 +135,7 @@
     color: rgb(13, 92, 182);
     border-radius: 4px;
     border: 1px solid rgb(13, 92, 182);
-    width:90%;
+    width: 90%;
     padding: 8px;
 }
 
@@ -149,17 +149,17 @@
     padding: 8px;
 }
 
-.benifit-icon{
-    width:30px;
+.benifit-icon {
+    width: 30px;
     height: 30px;
 }
 
-.benifits-item{
+.benifits-item {
     display: grid;
     grid-template-rows: 30% auto;
     justify-items: center;
     align-items: center;
-    justify-self:center;
+    justify-self: center;
 }
 
 .action-icon {
@@ -194,14 +194,14 @@
     font-size: 18px;
 }
 
-button {
+.btn-change-value {
     width: 30px;
     height: 30px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(236, 236, 236);
 }
 
-    button:hover {
+    .btn-change-value:hover {
         background-color: rgb(239, 239, 239);
     }
 
@@ -216,7 +216,7 @@ button {
     font-size: 18px;
 }
 
-.btn-change-value {
+.img-change-value {
     margin: unset;
     width: 21px;
     height: 20px;
@@ -231,7 +231,7 @@ button {
     border-radius: 0px 4px 4px 0px;
 }
 
-input {
+#inputValue {
     margin: unset;
     padding: unset;
     width: 40px;
@@ -268,7 +268,6 @@ input {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-    
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
@@ -279,9 +278,9 @@ input {
 
     .grid-item1 {
         grid-column: unset;
-        justify-self:center;
-        border:unset;
-        padding-right:8px;
+        justify-self: center;
+        border: unset;
+        padding-right: 8px;
     }
 
     .grid-item2 {
@@ -304,7 +303,7 @@ input {
     }
 
     .grid-item1 img {
-        height:auto;
+        height: auto;
     }
 
     .buy-btn {

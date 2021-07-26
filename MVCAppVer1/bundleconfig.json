@@ -1,6 +1,6 @@
 [
   {
-    "outputFileName": "Content/_bundle/indexBundle.css",
+    "outputFileName": "Content/_bundle/_css_bundle/index.css",
     "inputFiles": [
       "Content/font.css",
       "Content/bootstrap.css",
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "outputFileName": "Content/_bundle/productDetaiBundle.css",
+    "outputFileName": "Content/_bundle/_css_bundle/productDetail.css",
     "inputFiles": [
       "Content/font.css",
       "Content/bootstrap.css",
@@ -18,22 +18,19 @@
     ]
   },
   {
-    "outputFileName": "Content/js/IndexJS.min.js",
-    "inputFiles": [
-      "Scripts/js/IndexJS.js"
-    ]
-  },
-  {
-    "outputFileName": "Content/js/DetailJS.min.js",
-    "inputFiles": [
-      "Scripts/js/DetailJS.js"
-    ]
-  },
-  {
-    "outputFileName": "Content/_bundle/indexJS.js",
+    "outputFileName": "Content/_bundle/_js_bundle/indexJS.js",
     "inputFiles": [
       "Scripts/jquery-3.6.0.min.js",
+      "Scripts/js/SiteJS.js",
       "Scripts/js/IndexJS.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/_bundle/_js_bundle/productDetail.js",
+    "inputFiles": [
+      "Scripts/jquery-3.6.0.min.js",
+      "Scripts/js/SiteJS.js",
+      "Scripts/js/productDetailJS.js"
     ]
   }
 ]

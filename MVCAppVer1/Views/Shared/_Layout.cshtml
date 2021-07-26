@@ -6,10 +6,18 @@
     <title>@ViewBag.Title</title>
     @RenderSection("css", required: false)
 </head>
-<body style="background-color: rgb(239, 239, 239);">
-    <div class="container body-content">
-        @RenderBody()
+<body>
+    @Html.Partial("~/Views/Shared/Header.cshtml")
+
+    <div style="background-color: rgb(239, 239, 239);">
+        <div class="container body-content">
+            @RenderBody()
+        </div>
     </div>
+
+    @Html.Partial("~/Views/Shared/Footer.cshtml")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
