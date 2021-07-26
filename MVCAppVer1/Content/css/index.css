@@ -3,7 +3,7 @@
     display: grid;
     grid-template-rows: auto auto auto;
     justify-items: center;
-    justify-content: center;
+    justify-content: stretch;
     padding: 8px 12px;
 }
 
@@ -14,8 +14,8 @@
     column-gap: 0;
     row-gap: 0;
     justify-items: stretch;
-    justify-content: stretch;
-    justify-self: center;
+    justify-content: space-around;
+    justify-self: stretch;
     align-content: stretch;
 }
 
@@ -89,7 +89,7 @@ a:link {
         max-width: 293px;
         max-height: 397px;
         min-width: 271px;
-        min-height: 375px;
+        min-height: 385px;
     }
 
     .product-name {
@@ -110,7 +110,7 @@ a:link {
         max-width: 362px;
         max-height: 470px;
         min-width: 294px;
-        min-height: 404px;
+        min-height: 410px;
     }
 
     .product-name {
@@ -131,7 +131,7 @@ a:link {
         max-width: 441px;
         max-height: 551px;
         min-width: 242px;
-        min-height: 352px;
+        min-height: 400px;
     }
 
     .product-name {
@@ -152,7 +152,7 @@ a:link {
         max-width: 482px;
         max-height: 586px;
         min-width: 239px;
-        min-height: 343px;
+        min-height: 390px;
     }
 
     .product-name {

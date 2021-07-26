@@ -366,7 +366,7 @@ textarea {
     }
 }
 
-@media (min-width: 320px) and (max-width: 575px) {
+@media (min-width: 320px) and (max-width: 576px) {
     .container {
         max-width: 98%;
     }
