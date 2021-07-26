@@ -12035,9 +12035,9 @@ textarea {
 .container .list-product {
     background-color: white;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     justify-items: center;
-    justify-content: start;
+    justify-content: center;
     padding: 8px 12px;
 }
 
@@ -12049,6 +12049,7 @@ textarea {
     row-gap: 0;
     justify-items: stretch;
     justify-content: stretch;
+    justify-self: center;
     align-content: stretch;
 }
 
@@ -12066,7 +12067,7 @@ a:link {
 .grid-item {
     cursor: pointer;
     padding: 8px;
-    justify-self: stretch;
+    justify-self: center;
     font-size: 0.6rem;
     width: 240px;
     height: 331px;
@@ -12218,3 +12219,8 @@ a:link {
         color: white;
         background: rgb(13,92,182);
     }
+
+.search-result-lable {
+    padding: 4px 8px;
+    justify-self: start;
+}
