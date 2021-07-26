@@ -20,8 +20,9 @@ namespace MVCAppVer1.Controllers
             if (string.IsNullOrEmpty(id)) return null;
 
             var getAll = Webservice.Helper.getProducts(20, 0);
+            if (getAll == null || getAll.Total == 0 || getAll.ListProducts == null) return null;
+
             var lst = getAll.ListProducts;
-            if (lst == null || getAll.Total == 0) return null;
 
             var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(id) && p.Url.Equals(url));
             if (obj == null) return null;
@@ -29,4 +30,4 @@ namespace MVCAppVer1.Controllers
             return View(obj);
         }
     }
-} 
+}

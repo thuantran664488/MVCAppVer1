@@ -12106,9 +12106,7 @@ a:link {
 }
 
 .product-price {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 24px;
+    font-size: 22px;
     margin: 0;
     color: rgb(36, 36, 36);
     font-weight: bold;
@@ -12127,11 +12125,11 @@ a:link {
     }
 
     .product-name {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .product-price {
-        font-size: 26px;
+        font-size: 22px;
     }
 }
 
@@ -12148,11 +12146,11 @@ a:link {
     }
 
     .product-name {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .product-price {
-        font-size: 28px;
+        font-size: 22px;
     }
 }
 
@@ -12169,11 +12167,11 @@ a:link {
     }
 
     .product-name {
-        font-size: 26px;
+        font-size: 18px;
     }
 
     .product-price {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
@@ -12190,11 +12188,11 @@ a:link {
     }
 
     .product-name {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .product-price {
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 
