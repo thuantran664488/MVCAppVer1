@@ -26,5 +26,11 @@ namespace Webservice
             return getProducts;
         }
 
+        public static ProductService.ProductDTO getProductById(int productId)
+        {
+            var getProduct = productSvc.GetProductById(productId);
+            return getProduct;
+        }
+
     }
 }

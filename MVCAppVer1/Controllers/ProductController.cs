@@ -12,20 +12,43 @@ namespace MVCAppVer1.Controllers
         /// <summary>
         /// ROUTE THE DETAIL PAGE
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public ActionResult Detail(string url, string id)
         {
-            if (string.IsNullOrEmpty(id)) return null;
+            long idFromUrl;
+            int validId;
+            try
+            {
+                // Max Int 32 = 2,147,483,647 - Lenght = 10
+                if (id.Length > 10)
+                {
+                    return View("~/Views/Home/Index.cshtml");
+                }
+                else
+                {
+                    idFromUrl = Int64.Parse(id);
+                    if (idFromUrl > Int32.MaxValue || idFromUrl < Int32.MinValue)
+                    {
+                        return View("~/Views/Home/Index.cshtml");
+                    }
+                    else
+                    {
+                        validId = Int32.Parse(idFromUrl.ToString());
+                    }
+                }
 
-            var getAll = Webservice.Helper.getProducts(20, 0);
-            if (getAll == null || getAll.Total == 0 || getAll.ListProducts == null) return null;
+            }
+            catch (FormatException)
+            {
+                //Unable to parse id;
+                return View("~/Views/Home/Index.cshtml");
+            }
 
-            var lst = getAll.ListProducts;
-
-            var obj = lst.FirstOrDefault(p => p != null && p.Id.Equals(id) && p.Url.Equals(url));
-            if (obj == null) return null;
+            var obj = Webservice.Helper.getProductById(validId);
+            if (obj == null) return View("~/Views/Home/Index.cshtml");
+            if (obj.Url != url)
+            {
+                return RedirectToAction("Detail", "Product", new { url = obj.Url, id = obj.Id });
+            }
 
             return View(obj);
         }
