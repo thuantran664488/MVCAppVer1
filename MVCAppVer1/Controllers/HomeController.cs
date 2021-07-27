@@ -13,7 +13,6 @@ namespace MVCAppVer1.Controllers
     public class HomeController : Controller
     {
         private const int PageSize = 5;
-        private Service service = Service.getInstance();
 
         /// <summary>
         /// FETCH DATE USING BUTTON VIEWMORE IN HOMEPAGE
@@ -27,11 +26,11 @@ namespace MVCAppVer1.Controllers
             double maxPrice = 10000000;
             if (!isSearching)
             {
-                getProducts = service.getProducts(PageSize, PageIndex);
+                getProducts = Service.Instance.getProducts(PageSize, PageIndex);
             }
             else
             {
-                getProducts = service.searchProduct(PageSize, PageIndex, keyword, minPrice, maxPrice);
+                getProducts = Service.Instance.searchProduct(PageSize, PageIndex, keyword, minPrice, maxPrice);
             }
             var remain = getProducts.Remain;
 
@@ -56,9 +55,7 @@ namespace MVCAppVer1.Controllers
             double minPrice = 0;
             double maxPrice = 10000000;
             var PageIndex = 0;
-            var searchProducts = service.searchProduct(PageSize, PageIndex, search, minPrice, maxPrice);
-            //var listProducts = searchProduct.ListProducts;
-
+            var searchProducts = Service.Instance.searchProduct(PageSize, PageIndex, search, minPrice, maxPrice);
 
             return View(searchProducts);
         }
