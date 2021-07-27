@@ -24,6 +24,11 @@ namespace MVCAppVer1
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
                 );
+            routes.MapRoute(
+                name: "NotFoundError",
+                url: "{*url}",
+                defaults: new { Controller = "Error", action = "PageNotFound" }
+            );
         }
     }
 }

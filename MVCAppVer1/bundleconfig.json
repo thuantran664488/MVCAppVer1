@@ -1,5 +1,14 @@
 [
   {
+    "outputFileName": "Content/_bundle/_css_bundle/error.css",
+    "inputFiles": [
+      "Content/font.css",
+      "Content/bootstrap.css",
+      "Content/Site.css",
+      "Content/css/error.css"
+    ]
+  },
+  {
     "outputFileName": "Content/_bundle/_css_bundle/index.css",
     "inputFiles": [
       "Content/font.css",

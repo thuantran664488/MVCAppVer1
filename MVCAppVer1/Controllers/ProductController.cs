@@ -4,11 +4,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCAppVer1.Models;
+using Webservice;
+using Webservice.ProductService;
 
 namespace MVCAppVer1.Controllers
 {
     public class ProductController : Controller
     {
+        Service service = Service.getInstance();
+
+
         /// <summary>
         /// ROUTE THE DETAIL PAGE
         /// </summary>
@@ -16,6 +21,8 @@ namespace MVCAppVer1.Controllers
         {
             long idFromUrl;
             int validId;
+
+
             try
             {
                 // Max Int 32 = 2,147,483,647 - Lenght = 10
@@ -43,7 +50,7 @@ namespace MVCAppVer1.Controllers
                 return View("~/Views/Home/Index.cshtml");
             }
 
-            var obj = Webservice.Helper.getProductById(validId);
+            var obj = service.getProductById(validId);
             if (obj == null) return View("~/Views/Home/Index.cshtml");
             if (obj.Url != url)
             {

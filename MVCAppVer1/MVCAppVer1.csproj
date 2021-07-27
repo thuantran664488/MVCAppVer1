@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\Helper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\css\error.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\font.css" />
     <Content Include="Content\src\icon\cart_icon.png" />
@@ -144,6 +146,10 @@
     <Content Include="Content\src\icon\tiki_logo_icon.png" />
     <Content Include="Content\src\icon\user_icon.png" />
     <Content Include="Content\src\Image\11.jpg" />
+    <Content Include="Content\_bundle\_css_bundle\error.css" />
+    <Content Include="Content\_bundle\_css_bundle\error.min.css">
+      <DependentUpon>error.css</DependentUpon>
+    </Content>
     <Content Include="Content\_bundle\_css_bundle\index.css" />
     <Content Include="Content\_bundle\_css_bundle\index.min.css">
       <DependentUpon>index.css</DependentUpon>
@@ -224,6 +230,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
