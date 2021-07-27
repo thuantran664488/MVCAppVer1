@@ -10,16 +10,13 @@ namespace Webservice
 {
     public class Service
     {
-        private static Service instance;
         private ProductSvc productSvc;
 
-        public static Service getInstance()
+
+        private static Service _instance;
+        public static Service Instance
         {
-            if (instance == null)
-            {
-                instance = new Service();
-            }
-            return instance;
+            get { return _instance ?? (_instance = new Service()); }
         }
 
         public Service()

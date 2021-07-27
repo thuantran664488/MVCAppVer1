@@ -11,7 +11,7 @@ namespace MVCAppVer1.Controllers
 {
     public class ProductController : Controller
     {
-        Service service = Service.getInstance();
+        //Service service = Service.getInstance();
 
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace MVCAppVer1.Controllers
                 return View("~/Views/Home/Index.cshtml");
             }
 
-            var obj = service.getProductById(validId);
+            var obj = Service.Instance.getProductById(validId);
             if (obj == null) return View("~/Views/Home/Index.cshtml");
             if (obj.Url != url)
             {
