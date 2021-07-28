@@ -18,6 +18,11 @@ namespace MVCAppVer1
                 url: "product/{url}-{id}", //{url}-{id}
                 defaults: new { controller = "Product", action = "Detail" }
                 );
+            routes.MapRoute(
+                name: "Search",
+                url: "search",
+                defaults: new { Controller = "Search", action = "SearchByName" }
+            );
 
             routes.MapRoute(
                 name: "Default",

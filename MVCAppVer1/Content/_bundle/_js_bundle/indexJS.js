@@ -57,7 +57,7 @@ $("#btnViewMore").click(function () {
                 $('.grid-container').append(result.html);
                 $('#remain').html(result.remain);
                 if (result.remain == 0) {
-                    $('#btnViewMore').remove();
+                    $('#btnViewMore').hide();
                 }
             }
         }

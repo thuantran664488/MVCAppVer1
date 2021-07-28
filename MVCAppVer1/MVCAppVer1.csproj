@@ -124,6 +124,7 @@
     <Compile Include="Controllers\Helper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -139,6 +140,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\css\error.css" />
     <Content Include="Content\css\index.css" />
+    <Content Include="Content\css\search.css" />
     <Content Include="Content\font.css" />
     <Content Include="Content\src\icon\cart_icon.png" />
     <Content Include="Content\src\icon\hamburger_menu_icon.png" />
@@ -158,6 +160,10 @@
     <Content Include="Content\_bundle\_css_bundle\productDetail.min.css">
       <DependentUpon>productDetail.css</DependentUpon>
     </Content>
+    <Content Include="Content\_bundle\_css_bundle\search.css" />
+    <Content Include="Content\_bundle\_css_bundle\search.min.css">
+      <DependentUpon>search.css</DependentUpon>
+    </Content>
     <Content Include="Content\_bundle\_js_bundle\indexJS.js" />
     <Content Include="Content\_bundle\_js_bundle\indexJS.min.js">
       <DependentUpon>indexJS.js</DependentUpon>
@@ -165,6 +171,10 @@
     <Content Include="Content\_bundle\_js_bundle\productDetail.js" />
     <Content Include="Content\_bundle\_js_bundle\productDetail.min.js">
       <DependentUpon>productDetail.js</DependentUpon>
+    </Content>
+    <Content Include="Content\_bundle\_js_bundle\search.js" />
+    <Content Include="Content\_bundle\_js_bundle\search.min.js">
+      <DependentUpon>search.js</DependentUpon>
     </Content>
     <Content Include="Scripts\js\DetailJS.js" />
     <Content Include="Scripts\js\DetailJS.min.js">
@@ -209,6 +219,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\SearchJS.js" />
     <Content Include="Scripts\js\SiteJS.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
@@ -227,10 +238,10 @@
     <Content Include="Views\Home\ListProduct.cshtml" />
     <Content Include="Views\Shared\Header.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -27,6 +27,15 @@
     ]
   },
   {
+    "outputFileName": "Content/_bundle/_css_bundle/search.css",
+    "inputFiles": [
+      "Content/font.css",
+      "Content/bootstrap.css",
+      "Content/Site.css",
+      "Content/css/search.css"
+    ]
+  },
+  {
     "outputFileName": "Content/_bundle/_js_bundle/indexJS.js",
     "inputFiles": [
       "Scripts/jquery-3.6.0.min.js",
@@ -39,7 +48,15 @@
     "inputFiles": [
       "Scripts/jquery-3.6.0.min.js",
       "Scripts/js/SiteJS.js",
-      "Scripts/js/productDetailJS.js"
+      "Scripts/js/DetailJS.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/_bundle/_js_bundle/search.js",
+    "inputFiles": [
+      "Scripts/jquery-3.6.0.min.js",
+      "Scripts/js/SiteJS.js",
+      "Scripts/js/SearchJS.js"
     ]
   }
 ]

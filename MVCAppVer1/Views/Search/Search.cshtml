@@ -1,0 +1,50 @@
+﻿@model Webservice.ProductService.ProductDTOResponse
+
+@section css{
+    <link href="~/Content/_bundle/_css_bundle/search.min.css" rel="stylesheet" />
+}
+
+
+<div class="container search-product">
+
+    @if (Model != null)
+    {
+        <div class="search-result-lable hidden">Kết quả tìm kiếm cho "<span style="font-weight: bold" class="search-keyword"></span>"</div>
+        <div class="list-product-body">
+            <div class="price-filter">
+                Price Filter
+                <div class="price-form">
+                    @*@Html.RadioButton("PriceRange", "under-oneHundred") <span>Dưới 100k </span><br />
+                        @Html.RadioButton("PriceRange", "range-oneHundred-fiveHundred") <span>100k - 500k</span><br />
+                        @Html.RadioButton("PriceRange", "range-fiveHundred-oneMil") <span>500k - 1 mil</span><br />
+                        @Html.RadioButton("PriceRange", "above-oneMil") <span>Trên 1 mil </span><br />*@
+                    @*<input type="range" min="1" max="10000000" value="50" class="slider" id="sliderRange">*@
+                    <input type="text" id="input-minPrice" name="minPrice" value="" placeholder="0"><br />
+                    <input type="text" id="input-maxPrice" name="manPrice" value="" placeholder="1000000000"><br />
+                    <button type="submit" class="" id="btnSearchByPrice">Search</button>
+                </div>
+
+            </div>
+            <div class="products-fitlered">
+                <div class="grid-container">
+                    @Html.Partial("~/Views/Home/ListProduct.cshtml", Model)
+                </div>
+                @if (Model != null && Model.Remain > 0)
+                {
+                    <button class="btn view-more" id="btnViewMore">Xem thêm <span id="remain">@Model.Remain</span> sản phẩm</button>
+                }
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div>Không tìm thấy yêu cầu của bạn</div>
+    }
+
+
+</div>
+
+@section scripts{
+    <script src="~/Content/_bundle/_js_bundle/search.min.js"></script>
+}

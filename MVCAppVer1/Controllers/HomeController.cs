@@ -19,7 +19,7 @@ namespace MVCAppVer1.Controllers
         /// </summary>
         /// <param name="PageIndex"></param>
         /// <returns></returns>
-        public ActionResult fetchData(int PageIndex, Boolean isSearching, string keyword)
+        public ActionResult fetchData(int PageIndex, bool isSearching, string keyword)
         {
             ProductDTOResponse getProducts;
             double minPrice = 0;
@@ -32,14 +32,13 @@ namespace MVCAppVer1.Controllers
             {
                 getProducts = Service.Instance.searchProduct(PageSize, PageIndex, keyword, minPrice, maxPrice);
             }
-            var remain = getProducts.Remain;
 
             var listProducts = getProducts.ListProducts;
             if (listProducts != null)
             {
                 var JSON = Json(new
                 {
-                    remain = remain,
+                    remain = getProducts.Remain,
                     html = Helper.RenderViewToString(ControllerContext, "~/Views/Home/ListProduct.cshtml", getProducts, true)
                 }); ;
                 return JSON;
