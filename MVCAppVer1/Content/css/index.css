@@ -1,7 +1,7 @@
 ﻿.container .list-product {
     background-color: white;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     justify-items: center;
     justify-content: stretch;
     padding: 8px 12px;
@@ -10,7 +10,7 @@
 .grid-container {
     padding: 16px 8px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     column-gap: 0;
     row-gap: 0;
     justify-items: stretch;
@@ -35,8 +35,6 @@ a:link {
     padding: 8px;
     justify-self: center;
     font-size: 0.6rem;
-    width: 240px;
-    height: 331px;
 }
 
     .grid-item:hover {
@@ -84,10 +82,6 @@ a:link {
     }
 
     .grid-item {
-        max-width: 293px;
-        max-height: 397px;
-        min-width: 271px;
-        min-height: 385px;
     }
 
     .product-name {
@@ -105,10 +99,6 @@ a:link {
     }
 
     .grid-item {
-        max-width: 362px;
-        max-height: 470px;
-        min-width: 294px;
-        min-height: 410px;
     }
 
     .product-name {
@@ -126,10 +116,6 @@ a:link {
     }
 
     .grid-item {
-        max-width: 441px;
-        max-height: 551px;
-        min-width: 242px;
-        min-height: 400px;
     }
 
     .product-name {
@@ -147,10 +133,6 @@ a:link {
     }
 
     .grid-item {
-        max-width: 482px;
-        max-height: 586px;
-        min-width: 239px;
-        min-height: 390px;
     }
 
     .product-name {
