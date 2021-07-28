@@ -73,6 +73,9 @@ $("#btnSearchByPrice").click(function () {
                 } else {
                     $('#btnViewMore').show();
                 }
+            } else {
+                $('.grid-container').empty();
+                $('#btnViewMore').hide();
             }
         }
     });

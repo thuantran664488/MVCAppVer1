@@ -14,11 +14,17 @@
     justify-self: stretch;
 }
 
-.price-form input[type=text] {
+.price-form input[type=number] {
     width: 100%;
     margin: 5px 0px;
     border: 2px solid rgb(239, 239, 239);
     border-radius: 3px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #btnSearchByPrice {

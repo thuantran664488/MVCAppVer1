@@ -19,19 +19,10 @@ namespace MVCAppVer1.Controllers
         /// </summary>
         /// <param name="PageIndex"></param>
         /// <returns></returns>
-        public ActionResult fetchData(int PageIndex, bool isSearching, string keyword)
+        public ActionResult fetchData(int PageIndex)
         {
             ProductDTOResponse getProducts;
-            double minPrice = 0;
-            double maxPrice = 10000000;
-            if (!isSearching)
-            {
-                getProducts = Service.Instance.getProducts(PageSize, PageIndex);
-            }
-            else
-            {
-                getProducts = Service.Instance.searchProduct(PageSize, PageIndex, keyword, minPrice, maxPrice);
-            }
+            getProducts = Service.Instance.getProducts(PageSize, PageIndex);
 
             var listProducts = getProducts.ListProducts;
             if (listProducts != null)
@@ -49,14 +40,17 @@ namespace MVCAppVer1.Controllers
             }
         }
 
-        public ActionResult Index(string search)
+        public ActionResult Index()
         {
-            double minPrice = 0;
-            double maxPrice = 10000000;
-            var PageIndex = 0;
-            var searchProducts = Service.Instance.searchProduct(PageSize, PageIndex, search, minPrice, maxPrice);
 
-            return View(searchProducts);
+            var PageIndex = 0;
+            var searchProducts = Service.Instance.getProducts(PageSize, PageIndex);
+            if (searchProducts != null)
+            {
+                return View(searchProducts);
+            }
+            else return null;
+
         }
     }
 }
