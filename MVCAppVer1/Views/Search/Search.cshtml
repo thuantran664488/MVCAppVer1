@@ -19,8 +19,8 @@
                         @Html.RadioButton("PriceRange", "range-fiveHundred-oneMil") <span>500k - 1 mil</span><br />
                         @Html.RadioButton("PriceRange", "above-oneMil") <span>Trên 1 mil </span><br />*@
                     @*<input type="range" min="1" max="10000000" value="50" class="slider" id="sliderRange">*@
-                    <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" id="input-minPrice" name="minPrice" value="" placeholder="0"><br />
-                    <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" id="input-maxPrice" name="manPrice" value="" placeholder="1000000000"><br />
+                    <input type="number" class="btn-change-price" id="input-minPrice" name="minPrice" value="" placeholder="0"><br />
+                    <input type="number" class="btn-change-price" id="input-maxPrice" name="manPrice" value="" placeholder="1000000000"><br />
                     <button type="submit" class="" id="btnSearchByPrice">Search</button>
                 </div>
 

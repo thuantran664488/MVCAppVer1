@@ -29,6 +29,12 @@ function isValidInputPrice() {
     } else return false;
 }
 
+$('.btn-change-price').keydown(function (e) {
+    if (e.keyCode == 189 || e.keyCode == 190 || e.keyCode == 69) {
+        e.preventDefault();
+    }
+})
+
 $('#input-minPrice').keyup(function () {
     if (isValidInputPrice()) {
         console.log("Valid");
