@@ -55,7 +55,7 @@ $("#btnSearchByPrice").click(function () {
     let keyword = getSearchKeyword();
     minPrice = $('#input-minPrice').val();
     maxPrice = $('#input-maxPrice').val();
-    if (!(minPrice > maxPrice)) {
+    if (minPrice < maxPrice) {
         $.ajax({
             type: 'POST', //POST
             url: '/search/filter/',
@@ -77,7 +77,7 @@ $("#btnSearchByPrice").click(function () {
                 }
             }
         });
-    } else alert("Your min is greater than max")
+    } else alert("Your min is greater or equal max\n Please check your min or max price again")
 })
 
 
