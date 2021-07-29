@@ -12320,6 +12320,10 @@ a:link {
     .product-price {
         font-size: 9px;
     }
+
+    .price-form input[type=number] {
+        width: 200px;
+    }
 }
 
 .hidden {
