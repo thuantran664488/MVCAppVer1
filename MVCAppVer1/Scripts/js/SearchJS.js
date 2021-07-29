@@ -62,9 +62,6 @@ $("#btnSearchByPrice").click(function () {
         cache: false,
         success: function (result) {
             if (result.html != null && result.remain >= 0) {
-                console.log(" HTML=  " + result.html);
-                console.log(" Remain=  " + result.remain);
-                console.log(" Total=  " + result.total);
                 $('.grid-container').empty();
                 $('.grid-container').append(result.html);
                 $('#remain').html(result.remain);

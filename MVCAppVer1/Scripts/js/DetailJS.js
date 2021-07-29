@@ -1,19 +1,28 @@
-﻿let inputValue = document.getElementById('inputValue');
-var newVal;
-const xhttp = new XMLHttpRequest();
-xhttp.status
-function handleChange() {
-    inputValue = document.getElementById('inputValue');
-    alert(inputValue.value);
-}
+﻿var newVal = 1;
 
-function decreaseValue() {
-    if (inputValue.value > 1) {
-        newVal = Number(inputValue.value) - 1;
-    } else newVal = 1;
-    inputValue.setAttribute('value', newVal);
+$('#inputValue').keydown(function (e) {
+    if (e.keyCode == 189 || e.keyCode == 190 || e.keyCode == 69) {
+        e.preventDefault();
+    } else {
     }
-function increaseValue() {
-    newVal = Number(inputValue.value) + 1;
-    inputValue.setAttribute('value', newVal);
-}
+})
+
+$('#inputValue').change(function () {
+    newVal = Number($('#inputValue').val())
+})
+
+$('#btn-decrease').click(function () {
+    console.log("Current value = " + newVal);
+    newVal = newVal - 1;
+    console.log("New Value = " + newVal);
+    if (newVal < 1) newVal = 1;
+    else $('#inputValue').val(newVal);
+})
+
+$('#btn-increase').click(function () {
+    console.log("Current value = " + newVal);
+    newVal = newVal + 1;
+    console.log("New Value = " + newVal);
+    $('#inputValue').val(newVal);
+
+})
