@@ -25,6 +25,7 @@ $('#input-search').keyup(function () {
 let PageIndex = 1;
 let minPrice = 0;
 let maxPrice = 0;
+let isSearching = true;
 
 function getSearchKeyword() {
     let searchUrl = window.location.search;
@@ -53,8 +54,11 @@ $('.btn-change-price').keydown(function (e) {
 $("#btnSearchByPrice").click(function () {
     PageIndex = 1;
     let keyword = getSearchKeyword();
-    minPrice = $('#input-minPrice').val();
-    maxPrice = $('#input-maxPrice').val();
+    minPrice = Number($('#input-minPrice').val());
+    console.log(minPrice);
+    maxPrice = Number($('#input-maxPrice').val());
+    console.log(maxPrice);
+    console.log(minPrice < maxPrice);
     if (minPrice < maxPrice) {
         $.ajax({
             type: 'POST', //POST
