@@ -11834,6 +11834,10 @@ textarea {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+    body {
+        font-size: 15px;
+    }
+
     .container {
         max-width: 98%;
     }
@@ -11887,9 +11891,17 @@ textarea {
             font-weight: 500;
             align-self: center;
         }
+
+    .footer-content div a {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
+    body {
+        font-size: 12px;
+    }
+
     .container {
         max-width: 98%;
     }
@@ -11958,9 +11970,17 @@ textarea {
     .about-tiki, .payment-method {
         display: none;
     }
+
+    .footer-content div a {
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
+    body {
+        font-size: 9px;
+    }
+
     .container {
         max-width: 98%;
     }
@@ -12029,6 +12049,10 @@ textarea {
 
     .about-tiki, .co-operation, .payment-method {
         display: none;
+    }
+
+    .footer-content div a {
+        font-size: 9px;
     }
 }
 
@@ -12149,115 +12173,6 @@ a:link {
     font-weight: bold;
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
-    .grid-container {
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-
-    .grid-item {
-    }
-
-    .product-name {
-        font-size: 18px;
-    }
-
-    .product-price {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-    .grid-container {
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-
-    .grid-item {
-    }
-
-    .product-name {
-        font-size: 14px;
-    }
-
-    .product-price {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 785px) and (max-width: 992px) {
-    .grid-container {
-        grid-template-columns: 33.3% 33.3% 33.3%;
-    }
-
-    .price-filter {
-        font-size: 13px;
-    }
-
-    .grid-item {
-    }
-
-    .product-name {
-        font-size: 14px;
-    }
-
-    .product-price {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 785px) {
-    .grid-container {
-        grid-template-columns: 33.3% 33.3% 33.3%;
-    }
-
-    .price-filter {
-        font-size: 13px;
-    }
-
-    .grid-item {
-    }
-
-    .product-name {
-        font-size: 11px;
-    }
-
-    .product-price {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 576px) {
-    .grid-container {
-        grid-template-columns: 50% 50%;
-    }
-
-    .list-product-body {
-        grid-template-columns: unset;
-    }
-
-    .price-filter {
-        font-size: 9px;
-    }
-
-    #btnSearchByPrice {
-        font-size: 9px;
-    }
-
-    .grid-item {
-    }
-
-    .product-name {
-        font-size: 8px;
-    }
-
-    .product-price {
-        font-size: 9px;
-    }
-}
-
-.hidden {
-    display: none;
-}
-
 .view-more {
     align-self: center;
     border: 1px solid rgb(13,92,182);
@@ -12280,4 +12195,133 @@ a:link {
     padding: 4px 8px;
     justify-self: start;
     margin: auto;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .grid-container {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .grid-item {
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    .view-more {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .grid-item {
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 14px;
+    }
+
+    .view-more {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 785px) and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    .price-filter {
+        font-size: 14px;
+    }
+
+    .grid-item {
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+
+    .view-more {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 785px) {
+    .grid-container {
+        grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    .price-filter {
+        font-size: 11px;
+    }
+
+    .grid-item {
+    }
+
+    .product-name {
+        font-size: 11px;
+    }
+
+    .product-price {
+        font-size: 12px;
+    }
+
+    .view-more {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: 50% 50%;
+    }
+
+    .list-product-body {
+        grid-template-columns: unset;
+    }
+
+    .price-filter {
+        font-size: 9px;
+    }
+
+    #btnSearchByPrice {
+        font-size: 9px;
+    }
+
+    .view-more {
+        font-size: 9px;
+    }
+
+    .grid-item {
+    }
+
+    .product-name {
+        font-size: 9px;
+    }
+
+    .product-price {
+        font-size: 9px;
+    }
+}
+
+.hidden {
+    display: none;
 }

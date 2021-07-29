@@ -11834,6 +11834,10 @@ textarea {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
+    body {
+        font-size: 15px;
+    }
+
     .container {
         max-width: 98%;
     }
@@ -11887,9 +11891,17 @@ textarea {
             font-weight: 500;
             align-self: center;
         }
+
+    .footer-content div a {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
+    body {
+        font-size: 12px;
+    }
+
     .container {
         max-width: 98%;
     }
@@ -11958,9 +11970,17 @@ textarea {
     .about-tiki, .payment-method {
         display: none;
     }
+
+    .footer-content div a {
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 576px) {
+    body {
+        font-size: 9px;
+    }
+
     .container {
         max-width: 98%;
     }
@@ -12029,6 +12049,10 @@ textarea {
 
     .about-tiki, .co-operation, .payment-method {
         display: none;
+    }
+
+    .footer-content div a {
+        font-size: 9px;
     }
 }
 

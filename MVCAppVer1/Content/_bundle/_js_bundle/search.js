@@ -113,7 +113,7 @@ $("#btnSearchByPrice").click(function () {
     if (minPrice < maxPrice) {
         callAjaxForPrice(0, keyword, minPrice, maxPrice);
 
-    } else alert("Your min is greater or equal max\n Please check your min or max price again")
+    } else alert("Please check your min or max price again")
 })
 
 
