@@ -14,11 +14,11 @@
             <div class="price-filter">
                 Price Filter
                 <div class="price-form">
-                    @*@Html.RadioButton("PriceRange", "under-oneHundred") <span>Dưới 100k </span><br />
-                        @Html.RadioButton("PriceRange", "range-oneHundred-fiveHundred") <span>100k - 500k</span><br />
-                        @Html.RadioButton("PriceRange", "range-fiveHundred-oneMil") <span>500k - 1 mil</span><br />
-                        @Html.RadioButton("PriceRange", "above-oneMil") <span>Trên 1 mil </span><br />*@
-                    @*<input type="range" min="1" max="10000000" value="50" class="slider" id="sliderRange">*@
+                    <input type="radio" name="radioName" value="all" /> All <br />
+                    <input type="radio" name="radioName" value="under100" /> Under 100k <br />
+                    <input type="radio" name="radioName" value="between100and500" /> 100k - 500k<br />
+                    <input type="radio" name="radioName" value="between500and1mil" /> 500k - 1 mil<br />
+                    <input type="radio" name="radioName" value="above1mil" /> Above 1 mil <br />
                     <span>Min: </span><input type="number" class="btn-change-price" id="input-minPrice" name="minPrice" value="" placeholder="0"><br />
                     <span>Max: </span><input type="number" class="btn-change-price" id="input-maxPrice" name="manPrice" value="" placeholder="1000000000"><br />
                     <button type="submit" class="" id="btnSearchByPrice">Search</button>
