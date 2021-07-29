@@ -75,7 +75,8 @@ function callAjaxForPrice(PageIndex, keyword, minPrice, maxPrice) {
     });
 }
 
-$('input[type=radio]').on('change', function () {
+$('input[type=radio]').on('click', function () {
+    $('.btn-change-price').val("");
     PageIndex = 1;
     let keyword = getSearchKeyword();
     radioValue = $('input[name=radioName]:checked').val();
@@ -103,6 +104,8 @@ $('input[type=radio]').on('change', function () {
 });
 
 $("#btnSearchByPrice").click(function () {
+    $('input[type=radio]').prop('checked', false);
+    $("input[type=radio]").removeAttr("checked");
     PageIndex = 1;
     let keyword = getSearchKeyword();
     minPrice = Number($('#input-minPrice').val());
