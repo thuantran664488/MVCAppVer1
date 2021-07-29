@@ -20,68 +20,40 @@ if (isSearching) {
     $(".search-keyword").html(decodeURI(getSearchKeyword()));
 }
 
-function isValidInputPrice() {
-    let patt = /(\d)+/;
-    minPrice = $('#input-minPrice').val();
-    maxPrice = $('#input-maxPrice').val();
-    if (patt.test(minPrice) && patt.test(maxPrice)) {
-        return true;
-    } else return false;
-}
-
 $('.btn-change-price').keydown(function (e) {
     if (e.keyCode == 189 || e.keyCode == 190 || e.keyCode == 69) {
         e.preventDefault();
     }
 })
 
-$('#input-minPrice').keyup(function () {
-    if (isValidInputPrice()) {
-        console.log("Valid");
-        $('#btnSearchByPrice').prop('disabled', false);
-    } else {
-        console.log("Not Valid");
-        $('#btnSearchByPrice').prop('disabled', true);
-    }
-})
-
-$('#input-maxPrice').keyup(function () {
-    if (isValidInputPrice()) {
-        console.log("Valid");
-        $('#btnSearchByPrice').prop('disabled', false);
-    } else {
-        console.log("Not Valid");
-        $('#btnSearchByPrice').prop('disabled', true);
-    }
-})
-
-
 $("#btnSearchByPrice").click(function () {
     PageIndex = 1;
     let keyword = getSearchKeyword();
     minPrice = $('#input-minPrice').val();
     maxPrice = $('#input-maxPrice').val();
-    $.ajax({
-        type: 'POST', //POST
-        url: '/search/filter/',
-        data: { PageIndex: 0, keyword: keyword, minPrice: minPrice, maxPrice: maxPrice },
-        cache: false,
-        success: function (result) {
-            if (result.html != null && result.remain >= 0) {
-                $('.grid-container').empty();
-                $('.grid-container').append(result.html);
-                $('#remain').html(result.remain);
-                if (result.remain == 0) {
-                    $('#btnViewMore').hide();
+    if (!(minPrice > maxPrice)) {
+        $.ajax({
+            type: 'POST', //POST
+            url: '/search/filter/',
+            data: { PageIndex: 0, keyword: keyword, minPrice: minPrice, maxPrice: maxPrice },
+            cache: false,
+            success: function (result) {
+                if (result.html != null && result.remain >= 0) {
+                    $('.grid-container').empty();
+                    $('.grid-container').append(result.html);
+                    $('#remain').html(result.remain);
+                    if (result.remain == 0) {
+                        $('#btnViewMore').hide();
+                    } else {
+                        $('#btnViewMore').show();
+                    }
                 } else {
-                    $('#btnViewMore').show();
+                    $('.grid-container').empty();
+                    $('#btnViewMore').hide();
                 }
-            } else {
-                $('.grid-container').empty();
-                $('#btnViewMore').hide();
             }
-        }
-    });
+        });
+    } else alert("Your min is greater than max")
 })
 
 
